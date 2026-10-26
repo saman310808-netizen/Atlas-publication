@@ -29,7 +29,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <span>Est. at the London School of Economics</span>
           </div>
           <div className="flex items-center gap-4 text-[11px] uppercase tracking-wider">
-            <span>Issue 04 in Circulation</span>
+            <span>Atlas Publication in Circulation</span>
             <span aria-hidden="true">·</span>
             <span className="text-[#6D2638] font-semibold">Submissions Open for Spring</span>
           </div>
@@ -97,7 +97,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 Distribution
               </span>
               <p className="font-editorial text-lg text-[#3B241C] font-semibold leading-tight">
-                Print & Open Digital Archive
+                Student Writing & Cultural Perspectives
               </p>
               <p className="text-xs text-[#7A3E2D] font-serif italic">
                 Printed on Munken Lynx 120gsm · Available at Saw Swee Hock Centre
@@ -135,7 +135,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {/* Featured Dispatches Callout Box (single-elevation card with subtle hairline border) */}
             <div className="bg-[#D7C6AE]/25 border border-[#3B241C]/15 rounded-sm p-6 space-y-4">
               <div className="flex items-center justify-between text-xs text-[#7A3E2D]">
-                <span className="font-medium uppercase tracking-wider">Featured Story in Issue 04</span>
+                <span className="font-medium uppercase tracking-wider">Featured Story in Atlas Publication</span>
                 <span className="font-mono tabular-nums">01 / DISPATCH</span>
               </div>
 
@@ -189,7 +189,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 className="px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#3B241C] bg-[#F5E9DE] border border-[#3B241C]/30 hover:border-[#6D2638] hover:text-[#6D2638] transition-colors rounded-sm flex items-center gap-2"
               >
                 <BookOpen className="w-4 h-4" />
-                <span>Explore Print Issue 04</span>
+                <span>Explore Print Atlas Publication</span>
               </button>
               <button
                 onClick={onOpenContribute}
