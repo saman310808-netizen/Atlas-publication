@@ -16,7 +16,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   onExploreAtlas,
   onOpenContribute,
 }) => {
-  const leadArticle = articles[0]; // Passage Through the Golden Horn
+  const leadArticle = articles[0];
 
   return (
     <section className="relative overflow-hidden border-b border-[#3B241C]/15 bg-paper-grain">
@@ -43,7 +43,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {/* Left Masthead Pillar (Institutional Credentials) */}
             <div className="hidden md:flex flex-col text-left space-y-1.5 w-64 shrink-0 border-r border-[#3B241C]/15 pr-6">
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#7A3E2D] font-mono font-medium">
-                Academic Patronage
+                Student Publication
               </span>
               <p className="font-editorial text-lg text-[#3B241C] font-semibold leading-tight">
                 London School of Economics & Political Science
@@ -73,9 +73,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               {/* Publication Masthead Typography */}
               <div className="space-y-1.5">
                 <div className="flex items-center justify-center sm:justify-start gap-2 text-xs uppercase tracking-widest text-[#7A3E2D] font-mono">
-                  <span>Vol. IV</span>
+                  <span>ATLAS</span>
                   <span aria-hidden="true">·</span>
-                  <span>Autumn / Winter 2026</span>
+                  <span>Literature · Culture · Society</span>
                 </div>
                 <div className="flex items-baseline justify-center sm:justify-start gap-2">
                   <span className="text-xs sm:text-sm font-sans font-semibold tracking-[0.3em] text-[#7A3E2D] uppercase">
@@ -100,7 +100,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 Student Writing & Cultural Perspectives
               </p>
               <p className="text-xs text-[#7A3E2D] font-serif italic">
-                Printed on Munken Lynx 120gsm · Available at Saw Swee Hock Centre
+                Writing, culture and perspectives from the student community
               </p>
             </div>
           </div>
@@ -141,32 +141,32 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
               <div className="space-y-2">
                 <button
-                  onClick={() => onSelectArticle(leadArticle)}
+                  onClick={() => leadArticle && onSelectArticle(leadArticle)}
                   className="group text-left focus-visible:outline-none"
                 >
                   <h3 className="font-editorial text-2xl sm:text-3xl font-medium text-[#3B241C] group-hover:text-[#6D2638] transition-colors leading-snug">
-                    {leadArticle.title}
+                    {leadArticle?.title ?? 'Stories coming soon'}
                   </h3>
                   <p className="text-sm text-[#7A3E2D] font-serif italic mt-1">
-                    {leadArticle.subtitle}
+                    {leadArticle?.subtitle ?? 'New voices and perspectives will appear here.'}
                   </p>
                 </button>
                 <p className="text-sm text-[#3B241C]/80 line-clamp-2">
-                  {leadArticle.excerpt}
+                  {leadArticle?.excerpt ?? 'We are preparing a space for original student writing across literature, culture and society.'}
                 </p>
               </div>
 
               <div className="flex flex-wrap items-center justify-between gap-4 pt-3 border-t border-[#3B241C]/10 text-xs text-[#7A3E2D]">
                 <div className="flex items-center gap-2">
-                  <span className="font-medium text-[#3B241C]">{leadArticle.author.name}</span>
+                  <span className="font-medium text-[#3B241C]">{leadArticle?.author.name ?? 'Atlas Editorial Team'}</span>
                   <span aria-hidden="true">·</span>
-                  <span>{leadArticle.author.origin}</span>
+                  <span>{leadArticle?.author.origin ?? 'LSE student community'}</span>
                   <span aria-hidden="true">·</span>
-                  <span>{leadArticle.readTime}</span>
+                  <span>{leadArticle?.readTime ?? ''}</span>
                 </div>
 
                 <button
-                  onClick={() => onSelectArticle(leadArticle)}
+                  onClick={() => leadArticle && onSelectArticle(leadArticle)}
                   className="font-medium text-[#6D2638] hover:text-[#3B241C] flex items-center gap-1 transition-colors uppercase tracking-wider text-[11px]"
                 >
                   <span>Read Piece</span>
