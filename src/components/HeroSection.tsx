@@ -135,8 +135,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {/* Featured Dispatches Callout Box (single-elevation card with subtle hairline border) */}
             <div className="bg-[#D7C6AE]/25 border border-[#3B241C]/15 rounded-sm p-6 space-y-4">
               <div className="flex items-center justify-between text-xs text-[#7A3E2D]">
-                <span className="font-medium uppercase tracking-wider">Featured Story in Atlas Publication</span>
-                <span className="font-mono tabular-nums">01 / DISPATCH</span>
+                <span className="font-medium uppercase tracking-wider">From the Editorial Desk</span>
+                <span className="font-mono tabular-nums">ATLAS / WRITING</span>
               </div>
 
               <div className="space-y-2">
@@ -166,10 +166,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 </div>
 
                 <button
-                  onClick={() => leadArticle && onSelectArticle(leadArticle)}
+                  onClick={() => leadArticle ? onSelectArticle(leadArticle) : onExploreAtlas()}
                   className="font-medium text-[#6D2638] hover:text-[#3B241C] flex items-center gap-1 transition-colors uppercase tracking-wider text-[11px]"
                 >
-                  <span>Read Piece</span>
+                  <span>Explore Writing</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </button>
               </div>
@@ -189,7 +189,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 className="px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#3B241C] bg-[#F5E9DE] border border-[#3B241C]/30 hover:border-[#6D2638] hover:text-[#6D2638] transition-colors rounded-sm flex items-center gap-2"
               >
                 <BookOpen className="w-4 h-4" />
-                <span>Explore Print Atlas Publication</span>
+                <span>Explore Editorial Sections</span>
               </button>
               <button
                 onClick={onOpenContribute}
