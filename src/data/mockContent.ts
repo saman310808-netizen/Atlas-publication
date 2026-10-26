@@ -1,4 +1,4 @@
-const heroImage = 'https://unsplash.com/photos/xrbbXIXAWY0/download?force=true&w=1800';
+const heroImage = 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1600&q=85';
 import issueCoverImage from '@/src/assets/images/atlas_issue_cover_1791734333548.jpg';
 import bosphorusImage from '@/src/assets/images/atlas_story_bosphorus_1791734343829.jpg';
 import rainPoetryImage from '@/src/assets/images/atlas_poetry_rain_1791734359304.jpg';
