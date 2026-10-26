@@ -30,10 +30,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContribute, onNavigate }) 
               The Houghton Street Postal Gazette
             </span>
             <h3 className="font-editorial text-2xl sm:text-3xl font-medium text-[#F5E9DE]">
-              Receive print release announcements and selected student dispatches.
+              Discover writing, culture and perspectives from the Atlas community.
             </h3>
             <p className="text-xs text-[#D7C6AE] max-w-lg">
-              Published twice per academic term. We never share student or reader communications.
+              Explore the publication and stay connected with Atlas.
             </p>
           </div>
 
@@ -162,15 +162,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContribute, onNavigate }) 
                   Submit a Manuscript
                 </button>
               </li>
-              <li>
-                <a
-                  href="#issue"
-                  onClick={() => onNavigate('issue')}
-                  className="hover:text-[#F1D98A] transition-colors block"
-                >
-                  Order Issue 04 Print
-                </a>
-              </li>
+              
               <li>
                 <button
                   onClick={() => onNavigate('join-us')}
@@ -179,9 +171,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContribute, onNavigate }) 
                   Join Our Contributors
                 </button>
               </li>
-              <li>
-                <span className="text-[#D7C6AE]/50 block">Back Catalog (Issues 01–03)</span>
-              </li>
+              
             </ul>
           </div>
 
@@ -191,7 +181,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContribute, onNavigate }) 
               Society & Colophon
             </span>
             <p className="text-xs text-[#D7C6AE]/80 leading-relaxed">
-              Typeset in Cormorant Garamond and Plus Jakarta Sans. Printed on FSC-certified Munken Lynx paper in East London.
+              A student-led space for literature, culture and society.
             </p>
 
             <div className="flex items-center gap-3 pt-1">
@@ -239,7 +229,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContribute, onNavigate }) 
           <div className="flex items-center gap-4 text-[11px] font-mono">
             <span>LSESU REGISTERED SOCIETY</span>
             <span aria-hidden="true">·</span>
-            <span>ISSN 2977-8492</span>
+            <span>ATLAS Publication</span>
           </div>
         </div>
       </div>
