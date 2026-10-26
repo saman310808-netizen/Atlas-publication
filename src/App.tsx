@@ -1,9 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
-import { IssueFeature } from './components/IssueFeature';
 import { DiscoverySection } from './components/DiscoverySection';
-import { CommunitySection } from './components/CommunitySection';
 import { ContributeSection } from './components/ContributeSection';
 import { Footer } from './components/Footer';
 import { SubmissionModal } from './components/SubmissionModal';
@@ -185,11 +183,10 @@ export default function App() {
         <main className="flex-1">
           <HeroSection
             onSelectArticle={openArticle}
-            onExploreIssue={() => scrollHomeSection('issue')}
+            onExploreIssue={() => navigatePage('notes-from')}
             onExploreAtlas={() => navigatePage('notes-from')}
             onOpenContribute={() => openContribute('stories')}
           />
-          <IssueFeature onSelectArticle={openArticle} />
           <DiscoverySection
             selectedCategoryFilter="all"
             onSelectArticle={openArticle}
@@ -199,7 +196,6 @@ export default function App() {
             onNavigate={navigatePage}
             onSelectArticle={openArticle}
           />
-          <CommunitySection />
           <ContributeSection onOpenSubmissionModal={(category) => openContribute(category || 'stories')} />
         </main>
       )}
