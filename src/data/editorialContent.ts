@@ -103,8 +103,8 @@ export interface EditorialTeamProfile {
 
 // Fill these profile fields when the editorial team supplies confirmed details.
 export const editorialTeamProfiles: EditorialTeamProfile[] =
-  cmsBoard.profiles.length > 0
-    ? cmsBoard.profiles.map((profile, index) => ({
+  (cmsBoard.profiles as Omit<EditorialTeamProfile, 'id'>[]).length > 0
+    ? (cmsBoard.profiles as Omit<EditorialTeamProfile, 'id'>[]).map((profile, index) => ({
         id: 'profile-' + (index + 1),
         name: profile.name,
         role: profile.role,
