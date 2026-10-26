@@ -52,13 +52,13 @@ export const DiscoverySection: React.FC<DiscoverySectionProps> = ({
               <Compass className="w-3.5 h-3.5 text-[#6D2638]" />
               <span>The Journal Catalog</span>
               <span aria-hidden="true">·</span>
-              <span>Archives & Current Issues</span>
+              <span>Writing & Perspectives</span>
             </div>
             <h2 className="font-editorial text-3xl sm:text-4xl lg:text-5xl font-medium text-[#3B241C] tracking-tight">
-              Latest Stories
+              Latest Writing
             </h2>
             <p className="text-sm sm:text-base text-[#3B241C]/80 font-serif italic max-w-2xl">
-              Recent writing from across the Atlas archive, with stories, poetry, travel dispatches, and cultural essays.
+              Explore our editorial sections. Student writing will appear here as contributions are published.
             </p>
           </div>
 
