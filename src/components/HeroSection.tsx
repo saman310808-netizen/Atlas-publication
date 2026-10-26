@@ -205,25 +205,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="relative h-full min-h-[380px] lg:min-h-[460px] rounded-sm overflow-hidden border border-[#3B241C]/20 shadow-md group">
               <img
                 src={heroImage}
-                alt="Open vintage world atlas with handwritten journal entries and travel envelopes"
+                alt="Library bookshelves"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
               />
-
-              {/* Curatorial Caption Overlay */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#3B241C]/90 via-[#3B241C]/50 to-transparent p-6 text-[#F5E9DE]">
-                <div className="flex items-center gap-2 text-[11px] tracking-widest uppercase text-[#F1D98A] font-medium mb-1">
-                  <span>Archival Visual</span>
-                  <span aria-hidden="true">·</span>
-                  <span>London & Global Dispatches</span>
-                </div>
-                <p className="font-editorial text-lg text-[#F5E9DE] leading-snug">
-                  "Every foreign student arrives with two passports: one stamped by border patrol, the other written in maternal recipes and childhood streets."
-                </p>
-                <p className="text-xs text-[#D7C6AE] font-serif italic mt-1.5">
-                  — The Atlas Editorial Board, Houghton Street
-                </p>
-              </div>
 
               {/* Corner Watermark Seal */}
               <div className="absolute top-4 right-4 bg-[#F5E9DE]/95 backdrop-blur-xs p-2 rounded-sm border border-[#3B241C]/20 shadow-sm flex items-center gap-2">
