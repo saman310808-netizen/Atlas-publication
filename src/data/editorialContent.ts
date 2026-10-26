@@ -1,3 +1,4 @@
+import cmsBoard from '../content/editorial-board.json';
 import type { AtlasPage } from '../components/pages/shared';
 
 export const regionalSections = [
@@ -101,11 +102,20 @@ export interface EditorialTeamProfile {
 }
 
 // Fill these profile fields when the editorial team supplies confirmed details.
-export const editorialTeamProfiles: EditorialTeamProfile[] = [
-  { id: 'profile-1', name: '', role: '', photo: '', bio: '' },
-  { id: 'profile-2', name: '', role: '', photo: '', bio: '' },
-  { id: 'profile-3', name: '', role: '', photo: '', bio: '' },
-];
+export const editorialTeamProfiles: EditorialTeamProfile[] =
+  (cmsBoard.profiles as Omit<EditorialTeamProfile, 'id'>[]).length > 0
+    ? (cmsBoard.profiles as Omit<EditorialTeamProfile, 'id'>[]).map((profile, index) => ({
+        id: 'profile-' + (index + 1),
+        name: profile.name,
+        role: profile.role,
+        photo: profile.photo || '',
+        bio: profile.bio || '',
+      }))
+    : [
+        { id: 'profile-1', name: '', role: '', photo: '', bio: '' },
+        { id: 'profile-2', name: '', role: '', photo: '', bio: '' },
+        { id: 'profile-3', name: '', role: '', photo: '', bio: '' },
+      ];
 
 export const atlasValues = [
   {

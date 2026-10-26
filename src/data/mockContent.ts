@@ -1,3 +1,4 @@
+import cmsArticles from '../content/articles.json';
 const heroImage = 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1600&q=85';
 import issueCoverImage from '@/src/assets/images/atlas_issue_cover_1791734333548.jpg';
 import bosphorusImage from '@/src/assets/images/atlas_story_bosphorus_1791734343829.jpg';
@@ -33,7 +34,44 @@ export const currentIssue: IssueInfo = {
   ],
 };
 
-export const articles: Article[] = [];
+type CmsArticle = {
+  title: string; subtitle?: string; category: Article['category']; region?: string;
+  author: string; authorCourse?: string; authorOrigin?: string; authorBio?: string;
+  date: string; image?: string; caption?: string; excerpt?: string; body: string;
+  pullQuote?: string; tags?: string[]; featured?: boolean;
+};
+
+const categoryNames: Record<Article['category'], string> = {
+  stories: 'Stories', poetry: 'Poetry', travel: 'Travel', culture: 'Culture',
+};
+
+export const articles: Article[] = (cmsArticles.items as CmsArticle[]).map((entry, index) => {
+  const content = (entry.body || '').split(/\n\s*\n/).map(p => p.trim()).filter(Boolean);
+  const words = (entry.body || '').trim().split(/\s+/).filter(Boolean).length;
+  return {
+    id: String(index + 1),
+    title: entry.title,
+    subtitle: entry.subtitle || '',
+    category: entry.category,
+    categoryLabel: categoryNames[entry.category],
+    author: {
+      name: entry.author,
+      course: entry.authorCourse || '',
+      origin: entry.authorOrigin || entry.region || '',
+      bio: entry.authorBio || '',
+    },
+    date: entry.date || '',
+    readTime: Math.max(1, Math.ceil(words / 220)) + ' min read',
+    image: entry.image || '',
+    caption: entry.caption || '',
+    excerpt: entry.excerpt || content[0]?.slice(0, 180) || '',
+    content,
+    pullQuote: entry.pullQuote || '',
+    tags: entry.tags || [],
+    featured: Boolean(entry.featured),
+    issue: 'Atlas / Digital',
+  };
+});
 
 export const globalOriginPoints = [];
 
