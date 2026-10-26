@@ -21,13 +21,13 @@ export const ContributeSection: React.FC<ContributeSectionProps> = ({
           <div className="max-w-3xl space-y-6 relative z-10">
             <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#F1D98A] font-medium">
               <Feather className="w-4 h-4 text-[#F1D98A]" />
-              <span>Call for Contributions · Issue 05</span>
+              <span>Call for Contributions</span>
               <span aria-hidden="true">·</span>
-              <span>Spring Term 2027</span>
+              <span></span>
             </div>
 
             <h2 className="font-editorial text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#F5E9DE] leading-tight">
-              Your voice belongs in print. Share your perspective with ATLAS.
+              Your voice belongs in Atlas. Share your perspective.
             </h2>
 
             <p className="text-base sm:text-lg text-[#D7C6AE] font-sans leading-relaxed max-w-2xl">
@@ -45,7 +45,7 @@ export const ContributeSection: React.FC<ContributeSectionProps> = ({
 
               <div className="flex items-center gap-2 text-xs text-[#D7C6AE] font-mono">
                 <Calendar className="w-3.5 h-3.5 text-[#F1D98A]" />
-                <span>Priority Deadline: 15 November 2026</span>
+                <span>Submission details to be announced</span>
               </div>
             </div>
           </div>
@@ -64,7 +64,7 @@ export const ContributeSection: React.FC<ContributeSectionProps> = ({
             </div>
             <div className="hidden sm:flex items-center gap-2 text-xs text-[#7A3E2D]">
               <ShieldCheck className="w-4 h-4 text-[#6D2638]" />
-              <span>Double-Blind Peer Review</span>
+              <span>Editorial review</span>
             </div>
           </div>
 
