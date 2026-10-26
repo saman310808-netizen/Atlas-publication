@@ -1,0 +1,216 @@
+I want to redesign and improve the existing Atlas Publication website, making it a sophisticated, modern, editorial-style website for an international cultural and literary publication.
+
+**IMPORTANT: Preserve the existing Atlas logo, current colour palette, typography where appropriate, and overall visual identity. Do not replace the logo, introduce a new colour scheme, or rebuild the website unnecessarily. Work within the existing React/Vite project and improve the current design, navigation, content and functionality.**
+
+The website should resemble a professional independent cultural magazine, with elegant typography, spacious layouts, thoughtful imagery, subtle animations and a polished editorial aesthetic. Avoid making it look like a generic university society website or corporate landing page.
+
+## 1. HOMEPAGE — ATLAS
+
+The main slogan should be:
+
+**"Where Cultures Connect"**
+
+Make this the prominent headline on the homepage, underneath or alongside the Atlas logo.
+
+Underneath, include a short introduction:
+
+"Atlas is a student-led publication exploring the cultures, stories and perspectives that shape our world. From personal reflections and literary expression to travel, identity and global conversations, we bring together voices across borders, celebrating both what makes us different and what connects us."
+
+The homepage should feature:
+- A beautiful, editorial-style hero section with the slogan and a short introduction.
+- A prominent "Explore Atlas" button that takes readers to the publication's main content.
+- A "Latest Stories" section featuring recently published articles, with article images, titles, categories, author names and publication dates.
+- A "Notes From Around the World" section with visually appealing cards linking to the different regional categories.
+- A featured creative writing section introducing "Margins".
+- A "Join Our Contributors" section encouraging students to write for Atlas.
+- A clean footer with navigation links, social media links, contact information and the Atlas logo.
+
+Make the homepage visually engaging without overcrowding it.
+
+## 2. NOTES FROM — REGIONAL PUBLICATIONS
+
+One of the main navigation sections should be called **"Notes From"**.
+
+When a visitor hovers over or clicks "Notes From", a dropdown menu should appear displaying the following regions:
+
+- Notes From the Americas — covering North America, Central America, South America and the Caribbean.
+- Notes From Europe
+- Notes From Asia
+- Notes From MENA — Middle East and North Africa
+- Notes From Sub-Saharan Africa
+- Notes From Australia & Oceania
+
+Each region should have its own dedicated page where readers can explore articles, essays, cultural commentary, personal experiences and perspectives related to that part of the world.
+
+Each regional page should have:
+- A beautiful regional heading, e.g. "Notes From Asia".
+- A short, thoughtful introduction to the region's section.
+- An editorial article grid with featured images, titles, authors and publication dates.
+- Space for articles covering culture, traditions, society, history, identity, contemporary issues and personal reflections.
+- Article filtering or tags where useful.
+
+Ensure that "Notes From" is itself a clickable main page, showing articles from all regions, alongside the regional dropdown.
+
+These regions are editorial categories, not restrictions on who can contribute. Writers should be able to explore their own experiences and perspectives, including cross-cultural and diasporic identities.
+
+## 3. MARGINS — POETRY & SHORT STORIES
+
+Create a main navigation section titled **"Margins"**.
+
+This section is dedicated to creative writing, specifically poetry, short stories and literary prose.
+
+At the top of the Margins page, include this introduction:
+
+"Not every story fits neatly within the lines. Margins is Atlas's home for creative expression — a space for poetry, fiction and the words that resist categorisation. Here, we invite writers to explore memory, identity, belonging, imagination and everything in between."
+
+Below the introduction, include a short section titled "What belongs in Margins?" with three categories:
+
+**Poetry**
+Original poetry in any style, exploring personal experiences, cultures, emotions, identity and imagination.
+
+**Short Stories**
+Original works of fiction, whether inspired by lived experiences, cultural traditions or entirely imagined worlds.
+
+**Literary Prose**
+Creative reflections, flash fiction and experimental writing that blur the boundaries between genres.
+
+Each category should have its own filter or subsection, allowing visitors to browse creative work easily.
+
+Display submissions in an elegant literary-magazine format. Poetry should be particularly readable, with generous spacing and careful preservation of line breaks.
+
+Include a "Submit to Margins" button linking to the Join Us page.
+
+## 4. TRAVEL — BEYOND BORDERS
+
+Create a main section called **"Travel"**, with the heading:
+
+"Beyond Borders"
+
+Include the following introduction:
+
+"Places are more than destinations. Through travel diaries, local perspectives and stories of discovery, Atlas explores the people, places and experiences that change how we see the world."
+
+This section should feature:
+- Travel diaries and personal experiences.
+- City guides and recommendations.
+- Cultural discoveries and local traditions.
+- Hidden gems and lesser-known destinations.
+- Reflections on travelling, belonging and experiencing unfamiliar places.
+
+Design the section with large, attractive travel photography and editorial article cards.
+
+Where appropriate, allow articles to be tagged by destination or region.
+
+## 5. JOIN US — WRITE FOR ATLAS
+
+Create a prominent main navigation section called **"Join Us"**.
+
+The heading should be:
+
+"Your Voice Belongs Here"
+
+Include this introduction:
+
+"Atlas is built on the belief that everyone has a story worth sharing. Whether you're an experienced writer or publishing your work for the first time, we welcome curious minds, fresh perspectives and a passion for storytelling."
+
+Explain the following contributor opportunities using three visually distinct but consistent cards:
+
+**Staff Writer**
+Become a regular member of the Atlas writing team, contributing articles and working closely with editors on publication ideas and assigned pieces.
+
+**Column Writer**
+Develop your own recurring column, exploring a particular subject, theme or perspective through a series of articles. Ideal for writers with a strong interest in a particular area.
+
+**Contributing Writer**
+Write for Atlas on a more flexible basis. Submit individual pitches, creative pieces or articles without committing to a regular publication schedule.
+
+Add a separate section titled **"Editorial Commissions"**.
+
+Explain:
+
+"Our editorial team periodically releases commissions — article ideas, themes and writing opportunities developed by Atlas editors. Writers can express interest in these commissions and contribute their perspectives to upcoming editions."
+
+Create a clean space for future commissions, with cards displaying the commission title, short brief, relevant section, deadline and application status.
+
+Include buttons for:
+- Apply to Join Atlas
+- Pitch an Article
+- View Open Commissions
+
+For now, create clearly identifiable placeholders for the application forms and submission links so they can be connected to Google Forms or another system later. Do not invent real application deadlines, email addresses or active commissions.
+
+## 6. ABOUT ATLAS
+
+Create an "About" section explaining the purpose and vision of the publication.
+
+Heading:
+
+"Many Perspectives. One Atlas."
+
+Suggested text:
+
+"Atlas was founded to create a space where different cultures, experiences and ideas can meet. We believe storytelling has the power to broaden perspectives, challenge assumptions and build connections across communities. Through journalism, creative writing and personal narratives, we aim to amplify diverse voices and encourage meaningful conversations."
+
+Include space for:
+- Our Mission
+- Meet the Editorial Team
+- Our Values
+- Contact Atlas
+
+For the editorial team, create a professional and editable layout for names, roles, photographs and short biographies. Use placeholders until real information is supplied.
+
+## 7. ADDITIONAL FEATURES
+
+Please also implement the following:
+
+**Article Pages**
+Create a consistent, professional article layout with:
+- Article title and subtitle.
+- Author name and publication date.
+- Category and regional tags.
+- Optional cover image.
+- Readable article text with clear paragraph spacing.
+- Author biography where available.
+- Related articles at the bottom.
+
+**Search and Discovery**
+Add a functional search feature so readers can find articles by title, author, region or topic. Include appropriate filtering options.
+
+**Mobile Responsiveness**
+Ensure that the entire website works beautifully on phones, tablets and desktops. Dropdown menus should become accessible mobile navigation menus.
+
+**Editorial Consistency**
+Use the existing colour palette throughout. Maintain consistent spacing, typography, button styles, image dimensions and article-card designs.
+
+**Content Management**
+Structure the website so editors can easily add, edit and remove articles, update commissions and manage editorial-team profiles without needing to redesign pages. Use reusable React components and a centralised content structure. Do not introduce a paid CMS or unnecessary dependencies without asking first.
+
+**Accessibility**
+Ensure sufficient colour contrast, accessible navigation, descriptive image alt text, keyboard-friendly menus and semantic headings.
+
+**Performance**
+Keep the website fast and lightweight. Use subtle hover effects and smooth transitions without excessive animation.
+
+## 8. NAVIGATION STRUCTURE
+
+The main navigation bar should follow this order:
+
+Home | Notes From ▼ | Margins | Travel | Join Us | About
+
+The "Notes From" dropdown should include the six regional sections listed above.
+
+Keep the logo visible in the header and make it clickable so users can return to the homepage.
+
+## 9. FINAL DESIGN DIRECTION
+
+The overall impression should be that of an independent, international literary and cultural magazine — refined, thoughtful, creative and welcoming.
+
+Prioritise strong editorial layouts, meaningful whitespace, striking but restrained imagery and excellent readability.
+
+Avoid generic corporate illustrations, unnecessary gradients, oversized buttons or excessive decorative elements.
+
+Retain the current Atlas logo and existing brand colours exactly.
+
+Do not remove existing published content or break existing working functionality. Reuse existing articles and assets where possible, and preserve existing routes or provide redirects when changing URLs.
+
+Please implement these changes in the existing project, rather than only describing them. Review the current codebase before making edits, and ensure the website builds successfully afterwards.

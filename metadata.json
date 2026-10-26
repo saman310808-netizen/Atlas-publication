@@ -1,0 +1,6 @@
+{
+  "name": "ATLAS — LSE Literary & Cultural Publication",
+  "description": "An international student-led literary, travel, and cultural journal at the London School of Economics and Political Science (LSE).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
