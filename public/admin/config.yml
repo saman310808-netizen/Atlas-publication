@@ -1,0 +1,58 @@
+backend:
+  name: github
+  repo: saman310808-netizen/Atlas-publication
+  branch: main
+
+publish_mode: editorial_workflow
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: articles
+    label: Articles
+    description: Add articles and photographs. Save drafts for editorial review before publishing.
+    files:
+      - name: articles
+        label: All Articles
+        file: src/content/articles.json
+        format: json
+        fields:
+          - label: Articles
+            name: items
+            widget: list
+            summary: "{{fields.title}} — {{fields.author}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string, required: false }
+              - { label: Section, name: category, widget: select, options: [stories, poetry, travel, culture] }
+              - { label: Region, name: region, widget: select, required: false, options: [americas, europe, asia, mena, sub-saharan-africa, australia-oceania] }
+              - { label: Author name, name: author, widget: string }
+              - { label: Author course, name: authorCourse, widget: string, required: false }
+              - { label: Author origin, name: authorOrigin, widget: string, required: false }
+              - { label: Author biography, name: authorBio, widget: text, required: false }
+              - { label: Publication date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+              - { label: Cover photograph, name: image, widget: image, required: false }
+              - { label: Image caption, name: caption, widget: string, required: false }
+              - { label: Short introduction, name: excerpt, widget: text, required: false }
+              - { label: Article text, name: body, widget: text, hint: "Separate paragraphs with a blank line." }
+              - { label: Pull quote, name: pullQuote, widget: text, required: false }
+              - { label: Tags, name: tags, widget: list, required: false, field: { label: Tag, name: tag, widget: string } }
+              - { label: Feature on homepage, name: featured, widget: boolean, required: false, default: false }
+  - name: editorial_board
+    label: Editorial Board
+    description: Add confirmed editorial team members and their photographs.
+    files:
+      - name: team
+        label: Team Profiles
+        file: src/content/editorial-board.json
+        format: json
+        fields:
+          - label: Team Members
+            name: profiles
+            widget: list
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Position, name: role, widget: string }
+              - { label: Photograph, name: photo, widget: image, required: false }
+              - { label: Biography, name: bio, widget: text, required: false }
