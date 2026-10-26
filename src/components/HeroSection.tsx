@@ -141,7 +141,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
               <div className="space-y-2">
                 <button
-                  onClick={() => leadArticle && onSelectArticle(leadArticle)}
+                  onClick={() => leadArticle ? onSelectArticle(leadArticle) : onExploreAtlas()}
                   className="group text-left focus-visible:outline-none"
                 >
                   <h3 className="font-editorial text-2xl sm:text-3xl font-medium text-[#3B241C] group-hover:text-[#6D2638] transition-colors leading-snug">
@@ -185,7 +185,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <span>Explore Atlas</span>
               </button>
               <button
-                onClick={onExploreIssue}
+                onClick={onExploreAtlas}
                 className="px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#3B241C] bg-[#F5E9DE] border border-[#3B241C]/30 hover:border-[#6D2638] hover:text-[#6D2638] transition-colors rounded-sm flex items-center gap-2"
               >
                 <BookOpen className="w-4 h-4" />
