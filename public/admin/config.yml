@@ -56,3 +56,34 @@ collections:
               - { label: Position, name: role, widget: string }
               - { label: Photograph, name: photo, widget: image, required: false }
               - { label: Biography, name: bio, widget: text, required: false }
+
+  - name: website_settings
+    label: Website Settings
+    description: Edit public-facing text on the homepage, About page and submission banner. Publishing updates the live website after Netlify deploys.
+    files:
+      - name: website_copy
+        label: Website Text
+        file: src/content/website-settings.json
+        format: json
+        fields:
+          - label: Homepage
+            name: homepage
+            widget: object
+            fields:
+              - { label: Main headline, name: headline, widget: string }
+              - { label: Homepage introduction, name: introduction, widget: text }
+          - label: About Us
+            name: about
+            widget: object
+            fields:
+              - { label: About page headline, name: headline, widget: string }
+              - { label: About introduction, name: introduction, widget: text }
+              - { label: Mission headline, name: missionHeadline, widget: string }
+              - { label: Mission description, name: missionDescription, widget: text }
+          - label: Submissions
+            name: submissions
+            widget: object
+            fields:
+              - { label: Submission banner headline, name: headline, widget: string }
+              - { label: Submission banner introduction, name: introduction, widget: text }
+              - { label: Submission status, name: status, widget: string }

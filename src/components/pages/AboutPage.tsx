@@ -1,3 +1,4 @@
+import websiteSettings from '../../content/website-settings.json';
 import type { FC } from 'react';
 import type { Article } from '../../types';
 import { atlasValues, editorialTeamProfiles } from '../../data/editorialContent';
@@ -12,8 +13,8 @@ export const AboutPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelectAr
       <div className={pageInner}>
         <PageHeading
           eyebrow="Atlas / Our publication"
-          title="Many Perspectives. One Atlas."
-          intro="Atlas was founded to create a space where different cultures, experiences and ideas can meet. We believe storytelling has the power to broaden perspectives, challenge assumptions and build connections across communities. Through journalism, creative writing and personal narratives, we aim to amplify diverse voices and encourage meaningful conversations."
+          title={websiteSettings.about.headline}
+          intro={websiteSettings.about.introduction}
         />
 
         <section aria-labelledby="our-mission" className="grid grid-cols-1 gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
@@ -25,10 +26,10 @@ export const AboutPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelectAr
           </div>
           <div className="border-l border-[#6D2638]/35 pl-5 sm:pl-7">
             <p className="font-editorial text-2xl leading-relaxed text-[#3B241C] sm:text-3xl">
-              A publication where different cultures, experiences and ideas can meet.
+              {websiteSettings.about.missionHeadline}
             </p>
             <p className="mt-5 max-w-2xl text-sm leading-relaxed text-[#7A3E2D] sm:text-base">
-              Atlas is a student-led international literary and cultural magazine. It brings together journalism, creative writing and personal narratives from across the student community, with the aim of broadening perspectives and building connection.
+              {websiteSettings.about.missionDescription}
             </p>
           </div>
         </section>

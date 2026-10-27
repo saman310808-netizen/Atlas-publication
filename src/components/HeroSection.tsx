@@ -1,3 +1,4 @@
+import websiteSettings from '../content/website-settings.json';
 import React from 'react';
 import { Compass, BookOpen, ArrowUpRight, Globe, Scroll } from 'lucide-react';
 import { heroImage, logoImage, articles } from '../data/mockContent';
@@ -123,12 +124,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
               {/* Main Headline */}
               <h2 className="font-editorial text-3xl sm:text-4xl lg:text-5xl xl:text-[3.5rem] font-medium tracking-tight text-[#3B241C] leading-[1.1] text-balance">
-                Where Cultures Connect
+                {websiteSettings.homepage.headline}
               </h2>
 
               {/* Dek / Curatorial premise */}
               <p className="text-base sm:text-lg text-[#3B241C]/85 leading-relaxed font-sans max-w-2xl">
-                Atlas is a student-led publication exploring the cultures, stories and perspectives that shape our world. From personal reflections and literary expression to travel, identity and global conversations, we bring together voices across borders, celebrating both what makes us different and what connects us.
+                {websiteSettings.homepage.introduction}
               </p>
             </div>
 
