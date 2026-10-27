@@ -1,3 +1,4 @@
+import websiteSettings from '../content/website-settings.json';
 import React from 'react';
 import { Feather, FileCheck, Calendar, ShieldCheck, ArrowRight } from 'lucide-react';
 import { submissionGuidelines } from '../data/mockContent';
@@ -27,11 +28,11 @@ export const ContributeSection: React.FC<ContributeSectionProps> = ({
             </div>
 
             <h2 className="font-editorial text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#F5E9DE] leading-tight">
-              Your voice belongs in Atlas. Share your perspective.
+              {websiteSettings.submissions.headline}
             </h2>
 
             <p className="text-base sm:text-lg text-[#D7C6AE] font-sans leading-relaxed max-w-2xl">
-              Whether you are an undergraduate testing your first verses or a postgraduate carrying a dispatch from your hometown, ATLAS invites all LSE students, researchers, and alumni to submit unpublished work.
+              {websiteSettings.submissions.introduction}
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -45,7 +46,7 @@ export const ContributeSection: React.FC<ContributeSectionProps> = ({
 
               <div className="flex items-center gap-2 text-xs text-[#D7C6AE] font-mono">
                 <Calendar className="w-3.5 h-3.5 text-[#F1D98A]" />
-                <span>Submission details to be announced</span>
+                <span>{websiteSettings.submissions.status}</span>
               </div>
             </div>
           </div>
