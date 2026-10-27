@@ -1,7 +1,7 @@
 import websiteSettings from '../content/website-settings.json';
 import React from 'react';
 import { Compass, BookOpen, ArrowUpRight, Globe, Scroll } from 'lucide-react';
-import { heroImage, logoImage, articles } from '../data/mockContent';
+import { logoImage, articles } from '../data/mockContent';
 import { Article } from '../types';
 
 interface HeroSectionProps {
@@ -205,11 +205,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div className="relative h-full min-h-[380px] lg:min-h-[460px] rounded-sm overflow-hidden border border-[#3B241C]/20 shadow-md group">
               <img
-                src={heroImage}
-                alt="Library bookshelves"
+                src="https://raw.githubusercontent.com/saman310808-netizen/Atlas-publication/main/56669092-9720-4d09-a65d-ea5cb258959b.jpeg"
+                alt="Colourful coastal village perched above the sea in Cinque Terre, Italy"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
               />
+
+              <span className="absolute bottom-3 right-3 rounded-sm bg-[#3B241C]/75 px-2 py-1 text-[10px] text-[#F5E9DE] backdrop-blur-sm">Image: Unsplash</span>
 
               {/* Corner Watermark Seal */}
               <div className="absolute top-4 right-4 bg-[#F5E9DE]/95 backdrop-blur-xs p-2 rounded-sm border border-[#3B241C]/20 shadow-sm flex items-center gap-2">
