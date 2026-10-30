@@ -113,3 +113,20 @@
 @media (prefers-reduced-motion:reduce) {
  .atlas-lead-image img,.atlas-text-link { transition:none; }
 }
+
+/* Home-only bridge from blush Margins to the deep brown footer. */
+.atlas-home-margins {
+  background:linear-gradient(
+    180deg,
+    #e8ccc6 0%,
+    #e8ccc6 52%,
+    #d8bdb4 70%,
+    #b89486 86%,
+    #795a50 100%
+  );
+}
+@media (max-width:767px) {
+  .atlas-home-margins {
+    background:linear-gradient(180deg,#e8ccc6 0%,#e8ccc6 65%,#b89486 87%,#795a50 100%);
+  }
+}
