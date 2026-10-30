@@ -5,9 +5,9 @@ export const regionalSections = [
   {
     id: 'americas',
     page: 'notes-from-americas',
-    title: 'The Americas',
-    description: 'North America, Central America, South America and the Caribbean.',
-    note: 'North, Central and South America, and the Caribbean',
+    title: 'North and South America',
+    description: 'North and South America.',
+    note: 'North and South America',
     keywords: ['americas', 'north america', 'central america', 'south america', 'caribbean', 'usa', 'canada', 'mexico', 'brazil', 'argentina'],
   },
   {
@@ -37,10 +37,10 @@ export const regionalSections = [
   {
     id: 'sub-saharan-africa',
     page: 'notes-from-sub-saharan-africa',
-    title: 'Sub-Saharan Africa',
-    description: 'A space for writing across the cultures and experiences of Sub-Saharan Africa.',
-    note: 'Stories across the region’s many voices',
-    keywords: ['sub-saharan africa', 'nigeria', 'lagos', 'ghana', 'kenya', 'senegal', 'south africa', 'africa'],
+    title: 'Africa and the Caribbean',
+    description: 'Africa and the Caribbean.',
+    note: 'Africa and the Caribbean',
+    keywords: ['caribbean', 'jamaica', 'trinidad', 'barbados', 'sub-saharan africa', 'nigeria', 'lagos', 'ghana', 'kenya', 'senegal', 'south africa', 'africa'],
   },
   {
     id: 'australia-oceania',
