@@ -68,25 +68,17 @@ export const NotesFromPage: FC<NotesFromPageProps> = ({
     <main className={pageFrame}>
       <div className={pageInner}>
         <PageHeading
-          eyebrow="Atlas / Regional writing"
-          title={activeInfo ? `Notes From ${activeInfo.title}` : 'Notes From Around the World'}
-          intro={
-            activeInfo
-              ? `${activeInfo.description} These editorial regions are starting points, not boundaries; writers are welcome to explore diasporic and cross-cultural perspectives.`
-              : 'A living notebook of place, memory and perspective. Explore writing connected to regions across the world, while following each writer’s own route between them.'
-          }
-        >
-          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-[#3B241C]/80">
-            Regions are editorial lenses, not limits on who can contribute or how a story can travel.
-          </p>
-        </PageHeading>
+          eyebrow="The Atlas / Regions"
+          title={activeInfo ? activeInfo.title : 'Notes From'}
+          intro={activeInfo ? activeInfo.title : 'Perspectives from around the world.'}
+        />
 
         <section aria-labelledby="regional-sections">
           <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="mb-1 text-[10px] font-medium uppercase tracking-[0.2em] text-[#7A3E2D]">Browse by region</p>
               <h2 id="regional-sections" className="font-editorial text-2xl font-medium text-[#3B241C]">
-                A wide-open index
+                Regions
               </h2>
             </div>
             <p className="text-xs text-[#7A3E2D]">{filteredArticles.length} archive {filteredArticles.length === 1 ? 'piece' : 'pieces'}</p>
@@ -116,7 +108,7 @@ export const NotesFromPage: FC<NotesFromPageProps> = ({
                     : 'border-[#3B241C]/20 bg-[#F5E9DE] text-[#3B241C] hover:border-[#6D2638]'
                 }`}
               >
-                Notes From {item.title}
+                {item.title}
               </button>
             ))}
           </div>
@@ -139,9 +131,9 @@ export const NotesFromPage: FC<NotesFromPageProps> = ({
                   {String(regions.indexOf(item) + 1).padStart(2, '0')} / REGION
                 </span>
                 <span className="block font-editorial text-2xl text-[#3B241C] group-hover:text-[#6D2638]">
-                  Notes From {item.title}
+                  {item.title}
                 </span>
-                <span className="mt-1 block text-xs leading-relaxed text-[#7A3E2D]">{item.description}</span>
+                
               </button>
             ))}
           </div>
@@ -170,7 +162,7 @@ export const NotesFromPage: FC<NotesFromPageProps> = ({
                 {activeInfo ? `Selected region / ${activeInfo.title}` : 'From the archive'}
               </p>
               <h2 id="notes-archive" className="font-editorial text-3xl font-medium text-[#3B241C] sm:text-4xl">
-                Field notes & perspectives
+                Articles
               </h2>
             </div>
           </div>
@@ -178,7 +170,7 @@ export const NotesFromPage: FC<NotesFromPageProps> = ({
             articles={filteredArticles}
             onSelectArticle={onSelectArticle}
             emptyTitle="No indexed pieces for this region yet"
-            emptyText="The current archive is shown only where its existing article details connect to a region."
+            emptyText=""
           />
         </section>
         <PageNav onNavigate={onNavigate} currentPage="notes-from" />

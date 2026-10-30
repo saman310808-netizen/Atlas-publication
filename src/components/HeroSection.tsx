@@ -21,22 +21,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
   return (
     <section className="relative overflow-hidden border-b border-[#3B241C]/15 bg-paper-grain">
-      {/* Editorial Dateline & Masthead Bar */}
-      <div className="border-b border-[#3B241C]/10 bg-[#D7C6AE]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap items-center justify-between text-xs text-[#7A3E2D] font-medium tracking-wide">
-          <div className="flex items-center gap-3">
-            <span className="font-serif italic">Houghton Street, London WC2A 2AE</span>
-            <span aria-hidden="true">·</span>
-            <span>Est. at the London School of Economics</span>
-          </div>
-          <div className="flex items-center gap-4 text-[11px] uppercase tracking-wider">
-            <span>Atlas Publication in Circulation</span>
-            <span aria-hidden="true">·</span>
-            <span className="text-[#6D2638] font-semibold">Submissions Open for Spring</span>
-          </div>
-        </div>
-      </div>
-
       {/* PROMINENT OFFICIAL LOGO & EDITORIAL MASTHEAD ON FIRST PAGE */}
       <div className="border-b border-[#3B241C]/15 bg-[#F5E9DE] py-8 sm:py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,7 +34,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 London School of Economics & Political Science
               </p>
               <p className="text-xs text-[#7A3E2D] font-serif italic">
-                A student-led international review of world literature, ideas & travels.
+                Perspectives on culture, society and the world.
               </p>
             </div>
 
@@ -66,9 +50,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-2 right-1/2 sm:right-0 translate-x-1/2 sm:translate-x-0 bg-[#3B241C] text-[#F1D98A] text-[9px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-xs shadow-xs border border-[#F1D98A]/30 whitespace-nowrap">
-                  Official Insignia
-                </div>
+                
               </div>
 
               {/* Publication Masthead Typography */}
@@ -87,7 +69,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   </h1>
                 </div>
                 <p className="text-xs sm:text-sm text-[#7A3E2D] font-serif italic tracking-wide max-w-sm">
-                  The Literary & Cultural Journal of the LSE Student Community
+                  An international student-led publication
                 </p>
               </div>
             </div>
@@ -119,7 +101,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <Compass className="w-3.5 h-3.5 text-[#6D2638]" />
                 <span>Editorial Mission</span>
                 <span aria-hidden="true">·</span>
-                <span>Connecting Over 140 Nationalities</span>
+                <span>International perspectives</span>
               </div>
 
               {/* Main Headline */}
@@ -136,8 +118,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {/* Featured Dispatches Callout Box (single-elevation card with subtle hairline border) */}
             <div className="bg-[#D7C6AE]/25 border border-[#3B241C]/15 rounded-sm p-6 space-y-4">
               <div className="flex items-center justify-between text-xs text-[#7A3E2D]">
-                <span className="font-medium uppercase tracking-wider">From the Editorial Desk</span>
-                <span className="font-mono tabular-nums">ATLAS / WRITING</span>
+                <span className="font-medium uppercase tracking-wider">Editorial Picks</span>
+                <span className="font-mono tabular-nums">Selected by the Editors-in-Chief</span>
               </div>
 
               <div className="space-y-2">
@@ -159,7 +141,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
               <div className="flex flex-wrap items-center justify-between gap-4 pt-3 border-t border-[#3B241C]/10 text-xs text-[#7A3E2D]">
                 <div className="flex items-center gap-2">
-                  <span className="font-medium text-[#3B241C]">{leadArticle?.author.name ?? 'Atlas Editorial Team'}</span>
+                  <span className="font-medium text-[#3B241C]">{leadArticle?.author.name ?? 'The Atlas Editorial Team'}</span>
                   <span aria-hidden="true">·</span>
                   <span>{leadArticle?.author.origin ?? 'LSE student community'}</span>
                   <span aria-hidden="true">·</span>
@@ -183,7 +165,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 className="px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#F5E9DE] bg-[#6D2638] hover:bg-[#7A3E2D] transition-colors rounded-sm shadow-xs flex items-center gap-2"
               >
                 <Compass className="w-4 h-4" />
-                <span>Explore Atlas</span>
+                <span>Explore The Atlas</span>
               </button>
               <button
                 onClick={onExploreAtlas}
@@ -192,12 +174,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <BookOpen className="w-4 h-4" />
                 <span>Explore Editorial Sections</span>
               </button>
-              <button
-                onClick={onOpenContribute}
-                className="px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#3B241C] bg-[#F5E9DE] border border-[#3B241C]/30 hover:border-[#6D2638] hover:text-[#6D2638] transition-colors rounded-sm"
-              >
-                <span>Submit Your Writing</span>
-              </button>
+              
             </div>
           </div>
 
@@ -214,17 +191,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <span className="absolute bottom-3 right-3 rounded-sm bg-[#3B241C]/75 px-2 py-1 text-[10px] text-[#F5E9DE] backdrop-blur-sm">Image: Unsplash</span>
 
               {/* Corner Watermark Seal */}
-              <div className="absolute top-4 right-4 bg-[#F5E9DE]/95 backdrop-blur-xs p-2 rounded-sm border border-[#3B241C]/20 shadow-sm flex items-center gap-2">
-                <img
-                  src={logoImage}
-                  alt="Insignia"
-                  className="w-6 h-6 object-cover rounded-xs"
-                />
-                <span className="font-editorial text-xs font-semibold text-[#3B241C] tracking-wide">
-                  ATLAS
-                </span>
               </div>
-            </div>
           </div>
         </div>
       </div>

@@ -33,11 +33,11 @@ const mainLinks: { id: AtlasPage; label: string }[] = [
 ];
 
 const regions: { id: AtlasPage; label: string }[] = [
-  { id: 'notes-from-americas', label: 'The Americas' },
+  { id: 'notes-from-americas', label: 'North and South America' },
   { id: 'notes-from-europe', label: 'Europe' },
   { id: 'notes-from-asia', label: 'Asia' },
   { id: 'notes-from-mena', label: 'MENA' },
-  { id: 'notes-from-sub-saharan-africa', label: 'Sub-Saharan Africa' },
+  { id: 'notes-from-sub-saharan-africa', label: 'Africa and the Caribbean' },
   { id: 'notes-from-australia-oceania', label: 'Australia & Oceania' },
 ];
 
@@ -73,13 +73,11 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onOpenContribute, o
         <a
           href={pagePaths.home}
           onClick={(event) => navigateLink(event, 'home')}
-          aria-label="Atlas home"
+          aria-label="The Atlas home"
           className="flex shrink-0 items-center gap-3 rounded py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6D2638]"
         >
           <AtlasLogo variant="wordmark" />
-          <span className="hidden border-l border-[#3B241C]/20 pl-3 text-[11px] uppercase tracking-widest text-[#7A3E2D]/80 xl:inline-block">
-            LSE International
-          </span>
+          
         </a>
 
         <nav aria-label="Main navigation" className="hidden items-center gap-4 text-[13px] font-medium lg:flex xl:gap-6">
@@ -170,14 +168,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onOpenContribute, o
           >
             <Search className="h-4 w-4" aria-hidden="true" />
           </button>
-          <button
-            type="button"
-            onClick={onOpenContribute}
-            className="hidden items-center gap-1.5 whitespace-nowrap rounded bg-[#6D2638] px-3.5 py-2 text-[11px] font-semibold uppercase tracking-wider text-[#F5E9DE] transition-colors hover:bg-[#7A3E2D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6D2638] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F5E9DE] sm:inline-flex"
-          >
-            <Feather className="h-3.5 w-3.5" aria-hidden="true" />
-            <span>Contribute</span>
-          </button>
+          
           <button
             type="button"
             onClick={() => setMobileMenuOpen((open) => !open)}
@@ -255,16 +246,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onOpenContribute, o
             >
               <Search className="h-4 w-4" aria-hidden="true" /> Search the archive
             </button>
-            <button
-              type="button"
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenContribute();
-              }}
-              className="inline-flex min-h-11 items-center justify-center gap-2 bg-[#6D2638] px-4 py-3 text-xs font-semibold uppercase tracking-wider text-[#F5E9DE] hover:bg-[#3B241C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6D2638]"
-            >
-              <Feather className="h-4 w-4" aria-hidden="true" /> Contribute to Atlas
-            </button>
+            
           </nav>
         </div>
       )}

@@ -28,9 +28,7 @@ export const AtlasLogo: React.FC<AtlasLogoProps> = ({
             />
           </div>
           {/* Subtle vintage stamp corner marker */}
-          <div className="absolute -bottom-2 -right-2 bg-[#3B241C] text-[#F1D98A] text-[9px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-xs shadow-xs border border-[#F1D98A]/30">
-            Official Insignia
-          </div>
+          
         </div>
 
         <div className="mt-4 space-y-1">
@@ -43,7 +41,7 @@ export const AtlasLogo: React.FC<AtlasLogoProps> = ({
             </span>
           </div>
           <p className="text-xs sm:text-sm text-[#7A3E2D] font-serif italic tracking-wide">
-            International Literary & Cultural Publication · London School of Economics
+            International student-led publication
           </p>
         </div>
       </div>
@@ -86,7 +84,7 @@ export const AtlasLogo: React.FC<AtlasLogoProps> = ({
           </div>
           {showSubtitle && (
             <span className="text-[10px] tracking-widest uppercase font-medium text-[#7A3E2D] mt-0.5">
-              LSE Literary Journal
+              International Publication
             </span>
           )}
         </div>
@@ -99,7 +97,7 @@ export const AtlasLogo: React.FC<AtlasLogoProps> = ({
       <div className={`relative rounded-sm overflow-hidden shadow-xs border border-[#3B241C]/20 bg-[#F5E9DE] ${className}`}>
         <img
           src={logoImage}
-          alt="ATLAS Insignia"
+          alt="The Atlas logo"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover"
         />
