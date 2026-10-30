@@ -113,3 +113,15 @@
 @media (prefers-reduced-motion:reduce) {
  .atlas-lead-image img,.atlas-text-link { transition:none; }
 }
+
+/* Brand anchor: original rich chocolate for THE ATLAS masthead and ribbon. */
+.atlas-home-hero .atlas-masthead-wordmark,
+.atlas-home-hero .atlas-masthead-wordmark h1,
+.atlas-home-hero .atlas-wordmark-the { color:#3B241C; }
+.atlas-home-hero .atlas-masthead-top { border-bottom-color:#3B241C; }
+.atlas-home-hero .atlas-masthead-bottom {
+  background:#3B241C;
+  border-top-color:#3B241C;
+  border-bottom-color:#3B241C;
+  color:#F7F4ED;
+}
