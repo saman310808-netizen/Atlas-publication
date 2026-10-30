@@ -137,7 +137,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Column 4: Society Colophon & Socials (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
             <span className="text-xs font-mono uppercase tracking-wider text-[#F1D98A] block">
-              Society & Colophon
+              Connect with The Atlas
             </span>
             <p className="text-xs text-[#D7C6AE]/80 leading-relaxed">
               A student-led space for literature, culture and society.
