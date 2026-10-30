@@ -16,9 +16,9 @@ export const TravelPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelectA
     <main className={pageFrame}>
       <div className={pageInner}>
         <PageHeading
-          eyebrow="Atlas / Place & passage"
-          title="Beyond Borders"
-          intro="Places are more than destinations. Through travel diaries, local perspectives and stories of discovery, Atlas explores the people, places and experiences that change how we see the world."
+          eyebrow="The Atlas / Travel"
+          title="Travel"
+          intro="Travel diaries, local perspectives, year abroad."
         />
 
         <section aria-labelledby="travel-writing">
@@ -37,7 +37,7 @@ export const TravelPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelectA
           </div>
 
           <SectionHeading
-            eyebrow="Travel dispatches"
+            eyebrow=""
             title="The road is part of the story"
             description="Field notes from the archive, tagged with the places and subjects named by their writers."
             id="travel-writing"
@@ -79,7 +79,7 @@ export const TravelPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelectA
                   <span className="font-medium text-[#3B241C]">{leadArticle.author.name}</span>
                   <span aria-hidden="true">·</span>
                   <span>{leadArticle.author.origin}</span>
-                  <span className="ml-auto font-semibold uppercase tracking-[0.15em] text-[#6D2638]">Read dispatch</span>
+                  <span className="ml-auto font-semibold uppercase tracking-[0.15em] text-[#6D2638]">Read article</span>
                 </div>
               </div>
             </button>
@@ -88,7 +88,7 @@ export const TravelPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelectA
           <ArticleGrid
             articles={otherArticles}
             onSelectArticle={onSelectArticle}
-            emptyTitle={leadArticle ? 'You have reached the end of this travel archive' : 'No travel dispatches in the archive yet'}
+            emptyTitle={leadArticle ? 'You have reached the end of this travel archive' : 'No travel articles yet'}
             emptyText={
               leadArticle
                 ? 'There are no further travel-category pieces in the supplied archive.'
