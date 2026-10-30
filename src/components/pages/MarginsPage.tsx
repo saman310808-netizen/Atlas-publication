@@ -46,22 +46,16 @@ export const MarginsPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelect
     <main className={pageFrame}>
       <div className={pageInner}>
         <PageHeading
-          eyebrow="Atlas / Creative writing"
+          eyebrow="The Atlas / Creative writing"
           title="Margins"
-          intro="Not every story fits neatly within the lines. Margins is Atlas's home for creative expression — a space for poetry, fiction and the words that resist categorisation. Here, we invite writers to explore memory, identity, belonging, imagination and everything in between."
+          intro="Poetry, short fiction, essays and creative work exploring identity, culture and the human experience."
         >
-          <button
-            type="button"
-            onClick={() => onNavigate('join-us')}
-            className="mt-6 inline-flex min-h-11 items-center border border-[#3B241C] bg-[#3B241C] px-5 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#F5E9DE] transition-colors hover:bg-[#6D2638] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6D2638] focus-visible:ring-offset-2"
-          >
-            Submit to Margins
-          </button>
+          
         </PageHeading>
 
         <section aria-labelledby="margins-categories">
           <SectionHeading
-            eyebrow="A place for"
+            eyebrow=""
             title="What belongs in Margins?"
             id="margins-categories"
           />
@@ -92,7 +86,7 @@ export const MarginsPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelect
           <SectionHeading
             eyebrow="The literary archive"
             title="Words beyond the lines"
-            description="Browse the creative work currently held in the Atlas archive."
+            description="Browse the creative work currently held in the The Atlas archive."
             id="margins-archive"
           />
           <div className="mb-6 flex flex-wrap gap-2" role="group" aria-label="Filter Margins writing">
@@ -131,9 +125,9 @@ export const MarginsPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelect
             </div>
           ) : (
             <div className="border border-dashed border-[#3B241C]/25 bg-[#D7C6AE]/15 px-6 py-12 text-center">
-              <p className="font-editorial text-2xl text-[#3B241C]">No pieces are separately indexed here yet</p>
+              <p className="font-editorial text-2xl text-[#3B241C]">No articles in this section yet</p>
               <p className="mx-auto mt-2 max-w-md font-serif text-sm italic leading-relaxed text-[#7A3E2D]">
-                This filter follows the categories and tags already present in the archive.
+                
               </p>
             </div>
           )}
