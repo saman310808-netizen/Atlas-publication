@@ -26,14 +26,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContribute, onNavigate }) 
       <div className="border-b border-[#F5E9DE]/10 bg-[#3B241C]/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-7 space-y-2">
-            <span className="text-[11px] uppercase tracking-widest text-[#F1D98A] font-mono">
-              The Houghton Street Postal Gazette
-            </span>
+            
             <h3 className="font-editorial text-2xl sm:text-3xl font-medium text-[#F5E9DE]">
-              Discover writing, culture and perspectives from the Atlas community.
+              Explore articles and perspectives from The Atlas.
             </h3>
             <p className="text-xs text-[#D7C6AE] max-w-lg">
-              Explore the publication and stay connected with Atlas.
+              Explore the publication and stay connected with The Atlas.
             </p>
           </div>
 
@@ -41,7 +39,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContribute, onNavigate }) 
             {subscribed ? (
               <div className="flex items-center gap-2 p-3 bg-[#6D2638]/40 border border-[#F1D98A]/30 rounded-sm text-xs text-[#F1D98A]">
                 <Check className="w-4 h-4 shrink-0" />
-                <span>You have been added to the ATLAS dispatch ledger.</span>
+                <span>You have been added to the The Atlas mailing list.</span>
               </div>
             ) : (
               <form onSubmit={handleSubscribe} className="flex gap-2">
@@ -83,18 +81,17 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContribute, onNavigate }) 
                   ATLAS
                 </span>
                 <span className="text-[10px] uppercase tracking-widest text-[#D7C6AE] mt-0.5 font-mono">
-                  LSE Literary Journal
+                  International Publication
                 </span>
               </div>
             </div>
 
             <p className="text-xs text-[#D7C6AE]/85 leading-relaxed font-sans max-w-sm">
-              An international student-led literary and cultural journal affiliated with the London School of Economics and Political Science Students’ Union (LSESU).
+              An international student-led publication covering culture, society, travel and creative writing.
             </p>
 
             <div className="text-xs text-[#D7C6AE]/70 font-serif italic space-y-0.5">
-              <p>Saw Swee Hock Student Centre</p>
-              <p>1 Sheffield Street, London WC2A 2AP</p>
+              
               <p className="font-mono text-[11px] not-italic text-[#F1D98A]/80">atlas@lsesu.org</p>
             </div>
           </div>
@@ -126,7 +123,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContribute, onNavigate }) 
                   onClick={() => onNavigate('travel')}
                   className="hover:text-[#F1D98A] transition-colors"
                 >
-                  Travel Dispatches & Field Notes
+                  Travel
                 </button>
               </li>
               <li>
@@ -142,7 +139,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContribute, onNavigate }) 
                   onClick={() => onNavigate('about')}
                   className="hover:text-[#F1D98A] transition-colors"
                 >
-                  About Atlas
+                  About The Atlas
                 </button>
               </li>
             </ul>
@@ -156,10 +153,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContribute, onNavigate }) 
             <ul className="space-y-2 text-xs text-[#D7C6AE]">
               <li>
                 <button
-                  onClick={onOpenContribute}
+                  onClick={() => onNavigate('join-us')}
                   className="hover:text-[#F1D98A] transition-colors text-left"
                 >
-                  Submit a Manuscript
+                  Join The Atlas
                 </button>
               </li>
               
@@ -225,11 +222,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContribute, onNavigate }) 
 
         {/* Bottom Colophon line */}
         <div className="mt-12 pt-6 border-t border-[#F5E9DE]/10 flex flex-col sm:flex-row items-center justify-between text-xs text-[#D7C6AE]/60 gap-4">
-          <p>© {new Date().getFullYear()} ATLAS Publication. All rights reserved by contributing authors.</p>
+          <p>© {new Date().getFullYear()} The Atlas. All rights reserved by contributing authors.</p>
           <div className="flex items-center gap-4 text-[11px] font-mono">
             <span>LSESU REGISTERED SOCIETY</span>
             <span aria-hidden="true">·</span>
-            <span>ATLAS Publication</span>
+            <span>The Atlas</span>
           </div>
         </div>
       </div>
