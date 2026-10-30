@@ -137,7 +137,7 @@ export default function App() {
     : route.page;
 
   return (
-    <div className="min-h-screen bg-[#F5E9DE] text-[#3B241C] flex flex-col selection:bg-[#6D2638] selection:text-[#F5E9DE]">
+    <div className="min-h-screen bg-[#F7F4ED] text-[#263B35] flex flex-col selection:bg-[#6D2638] selection:text-[#F5E9DE]">
       <Navbar
         currentPage={activePage}
         onNavigate={navigatePage}
@@ -153,8 +153,8 @@ export default function App() {
         />
       ) : isNotFound ? (
         <main className="flex-1 bg-paper-grain px-4 py-24 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7A3E2D]">Atlas archive</p>
-          <h1 className="mt-3 font-editorial text-5xl text-[#3B241C]">This page is not in the atlas.</h1>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7A3E2D]">The Atlas archive</p>
+          <h1 className="mt-3 font-editorial text-5xl text-[#3B241C]">This page could not be found.</h1>
           <button
             type="button"
             onClick={() => navigatePage('home')}
@@ -196,7 +196,7 @@ export default function App() {
             onNavigate={navigatePage}
             onSelectArticle={openArticle}
           />
-          <ContributeSection onOpenSubmissionModal={(category) => openContribute(category || 'stories')} />
+          
         </main>
       )}
 
