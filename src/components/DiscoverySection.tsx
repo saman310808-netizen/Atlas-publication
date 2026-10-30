@@ -17,10 +17,10 @@ export const DiscoverySection: React.FC<DiscoverySectionProps> = ({
   const [viewMode, setViewMode] = useState<'grid' | 'index'>('grid');
 
   const categories = [
-    { id: 'all', label: 'All Writings' },
+    { id: 'all', label: 'All articles' },
     { id: 'stories', label: 'Short Stories' },
     { id: 'poetry', label: 'Poetry' },
-    { id: 'travel', label: 'Travel Dispatches' },
+    { id: 'travel', label: 'Travel' },
     { id: 'culture', label: 'Cultural Essays' },
   ];
 
@@ -50,15 +50,15 @@ export const DiscoverySection: React.FC<DiscoverySectionProps> = ({
           <div className="space-y-2">
             <div className="text-xs uppercase tracking-widest text-[#7A3E2D] font-medium flex items-center gap-2">
               <Compass className="w-3.5 h-3.5 text-[#6D2638]" />
-              <span>The Journal Catalog</span>
+              <span>The Atlas</span>
               <span aria-hidden="true">·</span>
               <span>Writing & Perspectives</span>
             </div>
             <h2 className="font-editorial text-3xl sm:text-4xl lg:text-5xl font-medium text-[#3B241C] tracking-tight">
-              Latest Writing
+              Latest Articles
             </h2>
             <p className="text-sm sm:text-base text-[#3B241C]/80 font-serif italic max-w-2xl">
-              Explore our editorial sections. Student writing will appear here as contributions are published.
+              Explore our editorial sections. Explore the latest articles from The Atlas.
             </p>
           </div>
 
@@ -108,7 +108,7 @@ export const DiscoverySection: React.FC<DiscoverySectionProps> = ({
           {/* View toggle (Grid vs Index) */}
           <div className="flex items-center gap-1 text-xs text-[#7A3E2D]">
             <span className="hidden sm:inline font-mono tabular-nums mr-2">
-              {filteredArticles.length} {filteredArticles.length === 1 ? 'dispatch' : 'dispatches'}
+              {filteredArticles.length} {filteredArticles.length === 1 ? 'article' : 'articles'}
             </span>
             <div className="flex items-center border border-[#3B241C]/20 rounded-xs bg-[#F5E9DE] p-0.5">
               <button
@@ -254,7 +254,7 @@ export const DiscoverySection: React.FC<DiscoverySectionProps> = ({
         {filteredArticles.length === 0 && (
           <div className="p-12 text-center space-y-3 bg-[#F5E9DE] border border-[#3B241C]/15 rounded-sm">
             <BookOpen className="w-8 h-8 text-[#7A3E2D] mx-auto opacity-60" />
-            <h4 className="font-editorial text-2xl text-[#3B241C]">No dispatches match your query</h4>
+            <h4 className="font-editorial text-2xl text-[#3B241C]">No articles match your query</h4>
             <p className="text-sm text-[#7A3E2D] max-w-sm mx-auto font-serif italic">
               Try searching by country, theme, or resetting the genre filters.
             </p>
