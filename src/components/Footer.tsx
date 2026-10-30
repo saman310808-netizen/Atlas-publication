@@ -9,9 +9,9 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
-    <footer className="bg-[#3B241C] text-[#F5E9DE] border-t border-[#3B241C] relative overflow-hidden">
+    <footer className="bg-[#795B55] text-[#FFF9F2] border-t border-[#795B55] relative overflow-hidden">
       {/* Top Footer Ribbon */}
-      <div className="border-b border-[#F5E9DE]/10 bg-[#3B241C]/80">
+      <div className="border-b border-[#FFF9F2]/20 bg-[#8A6860]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-7 space-y-2">
             
