@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { Mail, Instagram, Twitter, Linkedin, Check, ArrowUpRight, BookOpen } from 'lucide-react';
-import { AtlasLogo } from './AtlasLogo';
+import React from 'react';
+import { Mail, Instagram, Twitter, Linkedin } from 'lucide-react';
 import { logoImage } from '../data/mockContent';
 
 interface FooterProps {
@@ -8,21 +7,10 @@ interface FooterProps {
   onNavigate: (sectionId: string) => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenContribute, onNavigate }) => {
-  const [newsletterEmail, setNewsletterEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!newsletterEmail) return;
-    setSubscribed(true);
-    setNewsletterEmail('');
-    setTimeout(() => setSubscribed(false), 4000);
-  };
-
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
     <footer className="bg-[#3B241C] text-[#F5E9DE] border-t border-[#3B241C] relative overflow-hidden">
-      {/* Top Footer Ribbon with Dispatch Signup */}
+      {/* Top Footer Ribbon */}
       <div className="border-b border-[#F5E9DE]/10 bg-[#3B241C]/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-7 space-y-2">
@@ -35,31 +23,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContribute, onNavigate }) 
             </p>
           </div>
 
-          <div className="md:col-span-5">
-            {subscribed ? (
-              <div className="flex items-center gap-2 p-3 bg-[#6D2638]/40 border border-[#F1D98A]/30 rounded-sm text-xs text-[#F1D98A]">
-                <Check className="w-4 h-4 shrink-0" />
-                <span>You have been added to the The Atlas mailing list.</span>
-              </div>
-            ) : (
-              <form onSubmit={handleSubscribe} className="flex gap-2">
-                <input
-                  required
-                  type="email"
-                  value={newsletterEmail}
-                  onChange={(e) => setNewsletterEmail(e.target.value)}
-                  placeholder="Your email address (@lse.ac.uk or external)"
-                  className="w-full px-3.5 py-2.5 text-xs bg-[#F5E9DE]/10 border border-[#F5E9DE]/20 text-[#F5E9DE] placeholder:text-[#D7C6AE]/60 rounded-sm focus:outline-none focus:border-[#F1D98A]"
-                />
-                <button
-                  type="submit"
-                  className="px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#3B241C] bg-[#F1D98A] hover:bg-[#F5E9DE] rounded-sm transition-colors shrink-0"
-                >
-                  Join
-                </button>
-              </form>
-            )}
-          </div>
+          <div className="md:col-span-5 flex justify-start md:justify-end"><button type="button" onClick={() => onNavigate('notes-from')} className="border-b border-[#F5E9DE]/60 pb-2 text-xs font-semibold uppercase tracking-widest">Read the latest articles ↗</button></div>
         </div>
       </div>
 
@@ -77,9 +41,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContribute, onNavigate }) 
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-editorial text-2xl font-medium tracking-wide text-[#F5E9DE] leading-none">
-                  ATLAS
-                </span>
+                <span className="font-editorial text-2xl font-medium tracking-wide text-[#F5E9DE] leading-none">THE ATLAS</span>
                 <span className="text-[10px] uppercase tracking-widest text-[#D7C6AE] mt-0.5 font-mono">
                   International Publication
                 </span>

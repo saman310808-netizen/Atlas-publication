@@ -1,8 +1,8 @@
-import websiteSettings from '../content/website-settings.json';
 import React from 'react';
-import { Compass, BookOpen, ArrowUpRight, Globe, Scroll } from 'lucide-react';
+import { ArrowUpRight, ArrowDownRight } from 'lucide-react';
+import websiteSettings from '../content/website-settings.json';
 import { logoImage, articles } from '../data/mockContent';
-import { Article } from '../types';
+import type { Article } from '../types';
 
 interface HeroSectionProps {
   onSelectArticle: (article: Article) => void;
@@ -11,191 +11,66 @@ interface HeroSectionProps {
   onOpenContribute: () => void;
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({
-  onSelectArticle,
-  onExploreIssue,
-  onExploreAtlas,
-  onOpenContribute,
-}) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectArticle, onExploreAtlas }) => {
   const leadArticle = articles[0];
-
   return (
-    <section className="relative overflow-hidden border-b border-[#3B241C]/15 bg-paper-grain">
-      {/* PROMINENT OFFICIAL LOGO & EDITORIAL MASTHEAD ON FIRST PAGE */}
-      <div className="border-b border-[#3B241C]/15 bg-[#F5E9DE] py-8 sm:py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
-            {/* Left Masthead Pillar (Institutional Credentials) */}
-            <div className="hidden md:flex flex-col text-left space-y-1.5 w-64 shrink-0 border-r border-[#3B241C]/15 pr-6">
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#7A3E2D] font-mono font-medium">
-                Student Publication
-              </span>
-              <p className="font-editorial text-lg text-[#3B241C] font-semibold leading-tight">
-                London School of Economics & Political Science
-              </p>
-              <p className="text-xs text-[#7A3E2D] font-serif italic">
-                Perspectives on culture, society and the world.
-              </p>
-            </div>
-
-            {/* Central Focal Emblem & Publication Title (The Official Logo) */}
-            <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-7 text-center sm:text-left">
-              {/* Official Logo Artwork Box */}
-              <div className="relative group shrink-0">
-                <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-sm overflow-hidden shadow-md border-2 border-[#3B241C]/25 bg-[#F5E9DE] transition-transform duration-300 group-hover:scale-[1.02]">
-                  <img
-                    src={logoImage}
-                    alt="THE ATLAS Official Publication Logo"
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                
-              </div>
-
-              {/* Publication Masthead Typography */}
-              <div className="space-y-1.5">
-                <div className="flex items-center justify-center sm:justify-start gap-2 text-xs uppercase tracking-widest text-[#7A3E2D] font-mono">
-                  <span>ATLAS</span>
-                  <span aria-hidden="true">·</span>
-                  <span>Literature · Culture · Society</span>
-                </div>
-                <div className="flex items-baseline justify-center sm:justify-start gap-2">
-                  <span className="text-xs sm:text-sm font-sans font-semibold tracking-[0.3em] text-[#7A3E2D] uppercase">
-                    THE
-                  </span>
-                  <h1 className="font-editorial text-4xl sm:text-5xl md:text-6xl font-medium tracking-[0.06em] text-[#3B241C] leading-none">
-                    ATLAS
-                  </h1>
-                </div>
-                <p className="text-xs sm:text-sm text-[#7A3E2D] font-serif italic tracking-wide max-w-sm">
-                  An international student-led publication
-                </p>
-              </div>
-            </div>
-
-            {/* Right Masthead Pillar (Publication Stats & Format) */}
-            <div className="hidden md:flex flex-col text-right space-y-1.5 w-64 shrink-0 border-l border-[#3B241C]/15 pl-6">
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#7A3E2D] font-mono font-medium">
-                Distribution
-              </span>
-              <p className="font-editorial text-lg text-[#3B241C] font-semibold leading-tight">
-                Student Writing & Cultural Perspectives
-              </p>
-              <p className="text-xs text-[#7A3E2D] font-serif italic">
-                Writing, culture and perspectives from the student community
-              </p>
-            </div>
+    <section className="atlas-home-hero">
+      <div className="atlas-masthead">
+        <div className="atlas-masthead-top">
+          <span>AN INTERNATIONAL STUDENT PUBLICATION</span>
+          <span>LONDON · GLOBAL PERSPECTIVES</span>
+        </div>
+        <div className="atlas-masthead-identity">
+          <img src={logoImage} alt="The Atlas original logo" className="atlas-masthead-logo" />
+          <div className="atlas-masthead-wordmark">
+            <span className="atlas-wordmark-the">THE</span>
+            <h1>ATLAS</h1>
+            <p>Where cultures connect.</p>
           </div>
+        </div>
+        <div className="atlas-masthead-bottom">
+          <span>CULTURE</span><span>·</span><span>STORIES</span><span>·</span><span>TRAVEL</span><span>·</span><span>PERSPECTIVES</span>
         </div>
       </div>
 
-      {/* MAIN HERO EDITORIAL CONTENT & LEAD STORY */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
-          {/* Left Column: Editorial Statement & Typographic Anchor (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col justify-between space-y-8">
-            <div className="space-y-6">
-              {/* Quiet unboxed kicker */}
-              <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-[#7A3E2D] font-medium">
-                <Compass className="w-3.5 h-3.5 text-[#6D2638]" />
-                <span>Editorial Mission</span>
-                <span aria-hidden="true">·</span>
-                <span>International perspectives</span>
-              </div>
+      <div className="atlas-lead-layout">
+        <div className="atlas-lead-image">
+          <img
+            src="https://raw.githubusercontent.com/saman310808-netizen/Atlas-publication/main/56669092-9720-4d09-a65d-ea5cb258959b.jpeg"
+            alt="Colourful coastal village above the Mediterranean Sea"
+            referrerPolicy="no-referrer"
+          />
+          <span className="atlas-photo-credit">Image: Unsplash</span>
+        </div>
+        <div className="atlas-lead-copy">
+          <div className="atlas-section-eyebrow"><span className="atlas-eyebrow-rule" /> THE ATLAS · AN INTRODUCTION</div>
+          <h2>{websiteSettings.homepage.headline}</h2>
+          <p>{websiteSettings.homepage.introduction}</p>
+          <button type="button" className="atlas-text-link" onClick={onExploreAtlas}>
+            Explore the publication <ArrowUpRight size={18} aria-hidden="true" />
+          </button>
+          <div className="atlas-lead-index"><span>01 / A WORLD OF PERSPECTIVES</span><ArrowDownRight size={20} aria-hidden="true" /></div>
+        </div>
+      </div>
 
-              {/* Main Headline */}
-              <h2 className="font-editorial text-3xl sm:text-4xl lg:text-5xl xl:text-[3.5rem] font-medium tracking-tight text-[#3B241C] leading-[1.1] text-balance">
-                {websiteSettings.homepage.headline}
-              </h2>
-
-              {/* Dek / Curatorial premise */}
-              <p className="text-base sm:text-lg text-[#3B241C]/85 leading-relaxed font-sans max-w-2xl">
-                {websiteSettings.homepage.introduction}
-              </p>
-            </div>
-
-            {/* Featured Dispatches Callout Box (single-elevation card with subtle hairline border) */}
-            <div className="bg-[#D7C6AE]/25 border border-[#3B241C]/15 rounded-sm p-6 space-y-4">
-              <div className="flex items-center justify-between text-xs text-[#7A3E2D]">
-                <span className="font-medium uppercase tracking-wider">Editorial Picks</span>
-                <span className="font-mono tabular-nums">Selected by the Editors-in-Chief</span>
-              </div>
-
-              <div className="space-y-2">
-                <button
-                  onClick={() => leadArticle ? onSelectArticle(leadArticle) : onExploreAtlas()}
-                  className="group text-left focus-visible:outline-none"
-                >
-                  <h3 className="font-editorial text-2xl sm:text-3xl font-medium text-[#3B241C] group-hover:text-[#6D2638] transition-colors leading-snug">
-                    {leadArticle?.title ?? 'Stories coming soon'}
-                  </h3>
-                  <p className="text-sm text-[#7A3E2D] font-serif italic mt-1">
-                    {leadArticle?.subtitle ?? 'New voices and perspectives will appear here.'}
-                  </p>
-                </button>
-                <p className="text-sm text-[#3B241C]/80 line-clamp-2">
-                  {leadArticle?.excerpt ?? 'We are preparing a space for original student writing across literature, culture and society.'}
-                </p>
-              </div>
-
-              <div className="flex flex-wrap items-center justify-between gap-4 pt-3 border-t border-[#3B241C]/10 text-xs text-[#7A3E2D]">
-                <div className="flex items-center gap-2">
-                  <span className="font-medium text-[#3B241C]">{leadArticle?.author.name ?? 'The Atlas Editorial Team'}</span>
-                  <span aria-hidden="true">·</span>
-                  <span>{leadArticle?.author.origin ?? 'LSE student community'}</span>
-                  <span aria-hidden="true">·</span>
-                  <span>{leadArticle?.readTime ?? ''}</span>
-                </div>
-
-                <button
-                  onClick={() => leadArticle ? onSelectArticle(leadArticle) : onExploreAtlas()}
-                  className="font-medium text-[#6D2638] hover:text-[#3B241C] flex items-center gap-1 transition-colors uppercase tracking-wider text-[11px]"
-                >
-                  <span>Explore Writing</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
-            </div>
-
-            {/* Action Row */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
-              <button
-                onClick={onExploreAtlas}
-                className="px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#F5E9DE] bg-[#6D2638] hover:bg-[#7A3E2D] transition-colors rounded-sm shadow-xs flex items-center gap-2"
-              >
-                <Compass className="w-4 h-4" />
-                <span>Explore The Atlas</span>
-              </button>
-              <button
-                onClick={onExploreAtlas}
-                className="px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#3B241C] bg-[#F5E9DE] border border-[#3B241C]/30 hover:border-[#6D2638] hover:text-[#6D2638] transition-colors rounded-sm flex items-center gap-2"
-              >
-                <BookOpen className="w-4 h-4" />
-                <span>Explore Editorial Sections</span>
-              </button>
-              
-            </div>
-          </div>
-
-          {/* Right Column: Tactile Still-life & Publication Insignia (5 cols) */}
-          <div className="lg:col-span-5 flex flex-col justify-between">
-            <div className="relative h-full min-h-[380px] lg:min-h-[460px] rounded-sm overflow-hidden border border-[#3B241C]/20 shadow-md group">
-              <img
-                src="https://raw.githubusercontent.com/saman310808-netizen/Atlas-publication/main/56669092-9720-4d09-a65d-ea5cb258959b.jpeg"
-                alt="Colourful coastal village perched above the sea in Cinque Terre, Italy"
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-              />
-
-              <span className="absolute bottom-3 right-3 rounded-sm bg-[#3B241C]/75 px-2 py-1 text-[10px] text-[#F5E9DE] backdrop-blur-sm">Image: Unsplash</span>
-
-              {/* Corner Watermark Seal */}
-              </div>
-          </div>
+      <div className="atlas-editors-strip">
+        <div className="atlas-editors-heading">
+          <span className="atlas-section-eyebrow">CURATED BY THE EDITORS</span>
+          <h2>Editorial Picks</h2>
+          <p>Writing selected by the Editors-in-Chief.</p>
+        </div>
+        <div className="atlas-editors-feature">
+          {leadArticle ? (
+            <button type="button" onClick={() => onSelectArticle(leadArticle)}>
+              <span className="atlas-section-eyebrow">FEATURED READING</span>
+              <strong>{leadArticle.title}</strong>
+              <span>{leadArticle.author.name} <ArrowUpRight size={17} aria-hidden="true" /></span>
+            </button>
+          ) : (
+            <p>Selections from our editors will appear here.</p>
+          )}
         </div>
       </div>
     </section>
   );
 };
-

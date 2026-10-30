@@ -58,7 +58,7 @@ export const DiscoverySection: React.FC<DiscoverySectionProps> = ({
               Latest Articles
             </h2>
             <p className="text-sm sm:text-base text-[#3B241C]/80 font-serif italic max-w-2xl">
-              Explore our editorial sections. Explore the latest articles from The Atlas.
+              New writing and perspectives from across The Atlas.
             </p>
           </div>
 
