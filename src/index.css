@@ -113,3 +113,9 @@
 @media (prefers-reduced-motion:reduce) {
  .atlas-lead-image img,.atlas-text-link { transition:none; }
 }
+
+/* Homepage-only: a soft blush-to-ivory finish before the existing footer. */
+.atlas-home-margins-ivory {
+  background:linear-gradient(180deg,#e8ccc6 0%,#e8ccc6 65%,#f0e2d9 82%,#f7f4ed 100%);
+  padding-bottom:clamp(6rem,10vw,10rem);
+}
