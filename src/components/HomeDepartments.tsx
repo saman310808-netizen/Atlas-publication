@@ -66,7 +66,7 @@ export const HomeDepartments: FC<HomeDepartmentsProps> = ({
         </div>
       </section>
 
-      <section className="border-b border-[#3B241C]/15 bg-[#E8CCC6] py-14 lg:py-20" aria-labelledby="margins-home">
+      <section className="atlas-home-margins-ivory border-b-0 py-14 lg:py-20" aria-labelledby="margins-home">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-14">
             <div className="lg:col-span-5">
