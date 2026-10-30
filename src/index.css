@@ -3,13 +3,13 @@
 @layer base {
   :root {
     --color-seal: #263B35;
-    --color-burgundy: #8D493E;
+    --color-burgundy: #B65D4A;
     --color-sienna: #7A3E2D;
     --color-copper: #99664F;
-    --color-butter: #F1D98A;
+    --color-butter: #D8A74C;
     --color-champagne: #C6A779;
     --color-seashell: #F7F4ED;
-    --color-oatmeal: #D7C6AE;
+    --color-oatmeal: #E8D5CD;
   }
 
   body {
@@ -49,14 +49,14 @@
 .atlas-lead-image:hover img { transform:scale(1.035); }
 .atlas-photo-credit { position:absolute; bottom:1rem; left:1rem; background:#f7f4edeb; padding:.4rem .65rem; font-size:.64rem; letter-spacing:.04em; }
 .atlas-lead-copy { display:flex; flex-direction:column; justify-content:center; padding:1rem 0; }
-.atlas-section-eyebrow { font-size:.65rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:#8d493e; }
-.atlas-eyebrow-rule { display:inline-block; width:25px; height:1px; vertical-align:middle; margin-right:.7rem; background:#8d493e; }
+.atlas-section-eyebrow { font-size:.65rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:#a34d3b; }
+.atlas-eyebrow-rule { display:inline-block; width:25px; height:1px; vertical-align:middle; margin-right:.7rem; background:#a34d3b; }
 .atlas-lead-copy h2 { font-family:'Libre Baskerville',Georgia,serif; font-size:clamp(2.1rem,4.2vw,4.5rem); line-height:1.17; letter-spacing:-.045em; margin:2rem 0 1.5rem; font-weight:400; }
 .atlas-lead-copy>p { font-size:1.08rem; line-height:1.85; max-width:32rem; color:#40564e; }
 .atlas-text-link { align-self:flex-start; display:inline-flex; align-items:center; gap:1.25rem; border-bottom:1px solid #263b35; padding:1.5rem 0 .65rem; font-size:.8rem; font-weight:700; letter-spacing:.06em; transition:gap .2s; }
 .atlas-text-link:hover { gap:1.7rem; }
 .atlas-lead-index { display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:4rem; font-size:.64rem; letter-spacing:.17em; color:#718079; }
-.atlas-editors-strip { border-top:1px solid #263b3530; border-bottom:1px solid #263b3530; background:#eae7df; padding:3rem max(2rem,calc((100vw - 1376px)/2)); display:grid; grid-template-columns:1fr 1.5fr; gap:3rem; align-items:center; }
+.atlas-editors-strip { border-top:1px solid #263b3530; border-bottom:1px solid #263b3530; background:#e0e9e3; padding:3rem max(2rem,calc((100vw - 1376px)/2)); display:grid; grid-template-columns:1fr 1.5fr; gap:3rem; align-items:center; }
 .atlas-editors-heading h2 { font-size:clamp(1.8rem,3vw,3rem); font-weight:400; margin:.5rem 0; }
 .atlas-editors-heading p { font-family:Georgia,serif; font-style:italic; color:#52645d; }
 .atlas-editors-feature { border-left:1px solid #263b3540; padding-left:3rem; }

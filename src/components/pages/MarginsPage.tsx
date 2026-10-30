@@ -6,22 +6,10 @@ import type { AtlasPageProps } from './shared';
 
 type MarginsFilter = 'all' | 'poetry' | 'stories' | 'prose';
 
-const categories: { id: MarginsFilter; title: string; description: string }[] = [
-  {
-    id: 'poetry',
-    title: 'Poetry',
-    description: 'Original poetry in any style, exploring personal experiences, cultures, emotions, identity and imagination.',
-  },
-  {
-    id: 'stories',
-    title: 'Short Stories',
-    description: 'Original works of fiction, whether inspired by lived experiences, cultural traditions or entirely imagined worlds.',
-  },
-  {
-    id: 'prose',
-    title: 'Literary Prose',
-    description: 'Creative reflections, flash fiction and experimental writing that blur the boundaries between genres.',
-  },
+const categories: { id: MarginsFilter; title: string }[] = [
+  { id: 'poetry', title: 'Poetry' },
+  { id: 'stories', title: 'Short Stories' },
+  { id: 'prose', title: 'Literary Prose' },
 ];
 
 export const MarginsPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelectArticle }) => {
@@ -66,7 +54,7 @@ export const MarginsPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelect
                 key={category.id}
                 onClick={() => setActiveFilter(category.id)}
                 aria-pressed={activeFilter === category.id}
-                className={`group min-h-48 border-b border-[#3B241C]/15 px-5 py-6 text-left transition-colors last:border-b-0 hover:bg-[#D7C6AE]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#6D2638] md:border-b-0 md:px-6 ${
+                className={`group min-h-32 border-b border-[#3B241C]/15 px-5 py-6 text-left transition-colors last:border-b-0 hover:bg-[#D7C6AE]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#6D2638] md:border-b-0 md:px-6 ${
                   activeFilter === category.id ? 'bg-[#D7C6AE]/20' : ''
                 }`}
               >
@@ -76,7 +64,6 @@ export const MarginsPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelect
                 <span className="mt-3 block font-editorial text-2xl text-[#3B241C] group-hover:text-[#6D2638]">
                   {category.title}
                 </span>
-                <span className="mt-2 block text-sm leading-relaxed text-[#7A3E2D]">{category.description}</span>
               </button>
             ))}
           </div>
@@ -86,7 +73,7 @@ export const MarginsPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelect
           <SectionHeading
             eyebrow="The literary archive"
             title="Words beyond the lines"
-            description="Browse the creative work currently held in the The Atlas archive."
+            description="Browse creative writing from The Atlas archive."
             id="margins-archive"
           />
           <div className="mb-6 flex flex-wrap gap-2" role="group" aria-label="Filter Margins writing">
@@ -126,9 +113,7 @@ export const MarginsPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelect
           ) : (
             <div className="border border-dashed border-[#3B241C]/25 bg-[#D7C6AE]/15 px-6 py-12 text-center">
               <p className="font-editorial text-2xl text-[#3B241C]">No articles in this section yet</p>
-              <p className="mx-auto mt-2 max-w-md font-serif text-sm italic leading-relaxed text-[#7A3E2D]">
-                
-              </p>
+              
             </div>
           )}
         </section>
