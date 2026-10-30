@@ -65,7 +65,7 @@ export const NotesFromPage: FC<NotesFromPageProps> = ({
   );
 
   return (
-    <main className={pageFrame}>
+    <main className={`${pageFrame} atlas-notes-page`}>
       <div className={pageInner}>
         <PageHeading
           eyebrow="The Atlas / Regions"
