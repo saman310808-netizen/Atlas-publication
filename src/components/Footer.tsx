@@ -1,6 +1,5 @@
 import React from 'react';
 import { Mail, Instagram, Twitter, Linkedin } from 'lucide-react';
-import { AtlasLogo } from './AtlasLogo';
 import { logoImage } from '../data/mockContent';
 
 interface FooterProps {
@@ -8,10 +7,10 @@ interface FooterProps {
   onNavigate: (sectionId: string) => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenContribute, onNavigate }) => {
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
     <footer className="bg-[#3B241C] text-[#F5E9DE] border-t border-[#3B241C] relative overflow-hidden">
-      {/* Top Footer Ribbon with Dispatch Signup */}
+      {/* Top Footer Ribbon */}
       <div className="border-b border-[#F5E9DE]/10 bg-[#3B241C]/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-7 space-y-2">
