@@ -13,7 +13,7 @@ export const TravelPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelectA
   const otherArticles = leadArticle ? travelArticles.slice(1) : travelArticles;
 
   return (
-    <main className={pageFrame}>
+    <main className={`${pageFrame} atlas-travel-page`}>
       <div className={pageInner}>
         <PageHeading
           eyebrow="The Atlas / Travel"
