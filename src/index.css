@@ -79,3 +79,37 @@
  .atlas-editors-strip { grid-template-columns:1fr; padding:2.5rem 1rem; gap:1.5rem; }
  .atlas-editors-feature { border-left:0; border-top:1px solid #263b3540; padding:1.5rem 0 0; }
 }
+
+/* Richer editorial colour story: restrained colour-blocking, not a logo change. */
+:root {
+  --atlas-forest:#263b35;
+  --atlas-sage:#cedfd4;
+  --atlas-terracotta:#a84d3d;
+  --atlas-rose:#e8ccc6;
+  --atlas-ochre:#d7a344;
+  --atlas-sand:#f0dfbf;
+}
+.atlas-home-hero .atlas-masthead-bottom { background:var(--atlas-forest); color:#f7f4ed; border-color:var(--atlas-forest); }
+.atlas-home-hero .atlas-masthead-bottom span:nth-child(even) { color:#e6ba6d; }
+.atlas-home-hero .atlas-text-link { color:var(--atlas-terracotta); border-color:var(--atlas-terracotta); }
+.atlas-home-hero .atlas-photo-credit { border-left:3px solid var(--atlas-ochre); }
+.atlas-editors-strip { background:#d7e3d9; border-top:3px solid var(--atlas-forest); }
+.atlas-editors-feature strong:hover { color:var(--atlas-terracotta); }
+.atlas-notes-page { background:linear-gradient(180deg,#d5e5da 0,#f7f4ed 330px); }
+.atlas-notes-page header { border-bottom-color:#69877e; }
+.atlas-notes-page header h1 { color:#263b35; }
+.atlas-notes-page button[aria-pressed="true"] { box-shadow:inset 0 -3px 0 #d7a344; }
+.atlas-margins-page { background:linear-gradient(180deg,#edcfca 0,#f7f4ed 340px); }
+.atlas-margins-page header { border-bottom-color:#b65d4a; }
+.atlas-margins-page section[aria-labelledby="margins-categories"] button:nth-child(1) { background:#f4e3dc; }
+.atlas-margins-page section[aria-labelledby="margins-categories"] button:nth-child(2) { background:#e9d2cd; }
+.atlas-margins-page section[aria-labelledby="margins-categories"] button:nth-child(3) { background:#e0c1b9; }
+.atlas-margins-page section[aria-labelledby="margins-categories"] button:hover { background:#d9afa4; }
+.atlas-margins-page section[aria-labelledby="margins-categories"] button[aria-pressed="true"] { box-shadow:inset 0 -4px 0 #a84d3d; }
+.atlas-travel-page { background:linear-gradient(180deg,#f0dfbf 0,#f7f4ed 350px); }
+.atlas-travel-page header { border-bottom-color:#c08c36; }
+.atlas-travel-page section[aria-labelledby="travel-writing"] > div:first-child { background:#f2e6cf; padding:1.2rem; border-top:2px solid #d7a344; }
+.atlas-travel-page section[aria-labelledby="travel-writing"] > div:first-child span { color:#95631e; }
+@media (prefers-reduced-motion:reduce) {
+ .atlas-lead-image img,.atlas-text-link { transition:none; }
+}
