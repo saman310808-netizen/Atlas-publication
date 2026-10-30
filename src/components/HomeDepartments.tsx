@@ -33,7 +33,7 @@ export const HomeDepartments: FC<HomeDepartmentsProps> = ({
                 Notes From
               </h2>
               <p className="mt-2 max-w-xl font-serif text-base italic text-[#7A3E2D]">
-                Regional sections are editorial starting points, never limits on who can contribute.
+                Perspectives from around the world.
               </p>
             </div>
             <button
@@ -57,9 +57,9 @@ export const HomeDepartments: FC<HomeDepartmentsProps> = ({
                   {String(index + 1).padStart(2, '0')} / REGION
                 </span>
                 <span className="mt-3 block font-editorial text-2xl text-[#3B241C] group-hover:text-[#6D2638]">
-                  Notes From {region.title}
+                  {region.title}
                 </span>
-                <span className="mt-1 block text-xs leading-relaxed text-[#7A3E2D]">{region.note}</span>
+                
               </button>
             ))}
           </div>
@@ -77,7 +77,7 @@ export const HomeDepartments: FC<HomeDepartmentsProps> = ({
                 Margins
               </h2>
               <p className="mt-4 max-w-xl font-serif text-lg italic leading-relaxed text-[#7A3E2D]">
-                Not every story fits neatly within the lines. Poetry, fiction and words that resist categorisation find a home here.
+                Poetry, short fiction, essays and creative work exploring identity, culture and the human experience.
               </p>
               <button
                 type="button"
@@ -101,26 +101,7 @@ export const HomeDepartments: FC<HomeDepartmentsProps> = ({
         </div>
       </section>
 
-      <section className="border-b border-[#3B241C]/15 bg-[#F5E9DE] py-12 lg:py-16">
-        <div className="mx-auto flex max-w-7xl flex-col gap-5 px-4 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
-          <div>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#7A3E2D]">Write for Atlas</p>
-            <h2 className="mt-2 font-editorial text-3xl font-medium text-[#3B241C] sm:text-4xl">
-              Your voice belongs here.
-            </h2>
-            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[#3B241C]/80">
-              Join the people shaping a publication built on many perspectives and stories that cross borders.
-            </p>
-          </div>
-          <button
-            type="button"
-            onClick={() => onNavigate('join-us')}
-            className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 border border-[#6D2638] bg-[#6D2638] px-5 py-3 text-xs font-semibold uppercase tracking-wider text-[#F5E9DE] transition-colors hover:bg-[#3B241C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6D2638]"
-          >
-            Join Our Contributors <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-          </button>
-        </div>
-      </section>
+      
     </>
   );
 };
