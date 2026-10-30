@@ -31,7 +31,7 @@ export const MarginsPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelect
   }, [activeFilter, marginsArticles]);
 
   return (
-    <main className={pageFrame}>
+    <main className={`${pageFrame} atlas-margins-page`}>
       <div className={pageInner}>
         <PageHeading
           eyebrow="The Atlas / Creative writing"
