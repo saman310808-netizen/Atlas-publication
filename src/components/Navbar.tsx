@@ -36,7 +36,7 @@ const regions: { id: AtlasPage; label: string }[] = [
   { id: 'notes-from-americas', label: 'North and South America' },
   { id: 'notes-from-europe', label: 'Europe' },
   { id: 'notes-from-asia', label: 'Asia' },
-  { id: 'notes-from-mena', label: 'MENA' },
+  { id: 'notes-from-mena', label: 'Middle East and North Africa' },
   { id: 'notes-from-sub-saharan-africa', label: 'Africa and the Caribbean' },
   { id: 'notes-from-australia-oceania', label: 'Australia & Oceania' },
 ];

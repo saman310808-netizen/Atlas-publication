@@ -29,7 +29,7 @@ export const regionalSections = [
   {
     id: 'mena',
     page: 'notes-from-mena',
-    title: 'MENA',
+    title: 'Middle East and North Africa',
     description: 'The Middle East and North Africa, in all their varied voices and contexts.',
     note: 'The Middle East and North Africa',
     keywords: ['mena', 'middle east', 'north africa', 'istanbul', 'turkey', 'bosphorus', 'morocco', 'egypt', 'lebanon', 'palestine', 'iran'],
