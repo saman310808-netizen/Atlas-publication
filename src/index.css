@@ -37,7 +37,7 @@
 .atlas-masthead { max-width:1440px; margin:0 auto; padding:0 2rem; }
 .atlas-masthead-top { display:flex; justify-content:space-between; gap:1rem; padding:1.15rem 0; border-bottom:1px solid #263b3540; font-size:.64rem; letter-spacing:.2em; font-weight:600; }
 .atlas-masthead-identity { display:flex; align-items:center; justify-content:center; gap:2.25rem; padding:3rem 0 2.6rem; }
-.atlas-masthead-logo { width:150px; height:150px; object-fit:contain; }
+.atlas-masthead-logo { width:165px; height:165px; object-fit:contain; }
 .atlas-masthead-wordmark { position:relative; text-align:left; }
 .atlas-wordmark-the { font-size:.85rem; letter-spacing:.35em; font-weight:700; }
 .atlas-masthead-wordmark h1 { font-family:'Libre Baskerville',Georgia,serif; font-size:clamp(4rem,10vw,9rem); letter-spacing:-.07em; line-height:1; font-weight:400; }
@@ -68,7 +68,7 @@
  .atlas-masthead-top { font-size:.52rem; letter-spacing:.08em; }
  .atlas-masthead-top span:last-child { display:none; }
  .atlas-masthead-identity { flex-direction:column; gap:1rem; padding:2.2rem 0; }
- .atlas-masthead-logo { width:120px; height:120px; }
+ .atlas-masthead-logo { width:130px; height:130px; }
  .atlas-masthead-wordmark { text-align:center; }
  .atlas-masthead-wordmark h1 { font-size:clamp(4rem,17vw,6.5rem); }
  .atlas-masthead-bottom { gap:.7rem; flex-wrap:wrap; font-size:.52rem; }
