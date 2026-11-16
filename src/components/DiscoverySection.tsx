@@ -57,9 +57,6 @@ export const DiscoverySection: React.FC<DiscoverySectionProps> = ({
             <h2 className="font-editorial text-3xl sm:text-4xl lg:text-5xl font-medium text-[#3B241C] tracking-tight">
               Latest Articles
             </h2>
-            <p className="text-sm sm:text-base text-[#3B241C]/80 font-serif italic max-w-2xl">
-              New writing and perspectives from across The Atlas.
-            </p>
           </div>
 
           {/* Search Bar with clean understated styling */}
