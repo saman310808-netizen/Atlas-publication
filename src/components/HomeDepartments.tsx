@@ -32,9 +32,6 @@ export const HomeDepartments: FC<HomeDepartmentsProps> = ({
               <h2 id="notes-from-home" className="font-editorial text-4xl font-medium text-[#3B241C] sm:text-5xl">
                 Notes From
               </h2>
-              <p className="mt-2 max-w-xl font-serif text-base italic text-[#7A3E2D]">
-                Perspectives from around the world.
-              </p>
             </div>
             <button
               type="button"
