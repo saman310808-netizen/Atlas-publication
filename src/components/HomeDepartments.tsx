@@ -4,6 +4,7 @@ import type { Article } from '../types';
 import type { AtlasPage } from './pages';
 import { regionalSections } from '../data/editorialContent';
 import { ArticleCard } from './pages/shared';
+import { PhotographyFigure } from './PhotographyFigure';
 
 interface HomeDepartmentsProps {
   articles: Article[];
@@ -60,6 +61,17 @@ export const HomeDepartments: FC<HomeDepartmentsProps> = ({
               </button>
             ))}
           </div>
+
+          <PhotographyFigure
+            src="/photography/aidan-kelly-new-zealand-moon.avif"
+            alt="Full moon rising over distant mountain ridges and a valley filled with mist in New Zealand"
+            location="New Zealand"
+            year={2026}
+            photographer="Aidan Kelly"
+            instagramHandle="aidankelly.jpg"
+            className="ml-auto mt-9 max-w-[48rem]"
+            imageClassName="aspect-[16/9]"
+          />
         </div>
       </section>
 

@@ -3,6 +3,7 @@ import type { FC } from 'react';
 import type { Article } from '../../types';
 import { ArticleGrid, PageHeading, PageNav, SectionHeading, pageFrame, pageInner } from './shared';
 import type { AtlasPageProps } from './shared';
+import { PhotographyFigure } from '../PhotographyFigure';
 
 export const TravelPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelectArticle }) => {
   const travelArticles = useMemo(
@@ -111,6 +112,27 @@ export const TravelPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelectA
             </div>
           </section>
         )}
+        <section aria-labelledby="travel-photography" className="border-t border-[#3B241C]/15 pt-8 sm:pt-10">
+          <div className="mb-5">
+            <p className="mb-2 text-[10px] font-medium uppercase tracking-[0.2em] text-[#7A3E2D]">
+              Atlas photography
+            </p>
+            <h2 id="travel-photography" className="font-editorial text-3xl font-medium text-[#3B241C] sm:text-4xl">
+              Through the lens
+            </h2>
+          </div>
+          <PhotographyFigure
+            src="/photography/aidan-kelly-sri-lanka-beach.avif"
+            alt="A brown dog standing on a Sri Lankan beach with rolling surf, another dog and a distant city skyline"
+            location="Sri Lanka"
+            year={2026}
+            photographer="Aidan Kelly"
+            instagramHandle="aidankelly.jpg"
+            className="max-w-[58rem]"
+            imageClassName="aspect-[3/2]"
+          />
+        </section>
+
         <PageNav onNavigate={onNavigate} currentPage="travel" />
       </div>
     </main>
