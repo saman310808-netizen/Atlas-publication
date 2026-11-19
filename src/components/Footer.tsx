@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Instagram, Twitter, Linkedin } from 'lucide-react';
+import { Mail, Instagram, Linkedin } from 'lucide-react';
 import { logoImage } from '../data/mockContent';
 
 interface FooterProps {
@@ -145,7 +145,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
             <div className="flex items-center gap-3 pt-1">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/theatlas.lsesu/"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="w-8 h-8 rounded-xs bg-[#F5E9DE]/10 hover:bg-[#6D2638] flex items-center justify-center text-[#F5E9DE] transition-colors"
@@ -154,16 +154,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <Instagram className="w-4 h-4" />
               </a>
               <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="w-8 h-8 rounded-xs bg-[#F5E9DE]/10 hover:bg-[#6D2638] flex items-center justify-center text-[#F5E9DE] transition-colors"
-                aria-label="ATLAS on Twitter"
-              >
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/the-atlaslsesu/"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="w-8 h-8 rounded-xs bg-[#F5E9DE]/10 hover:bg-[#6D2638] flex items-center justify-center text-[#F5E9DE] transition-colors"
