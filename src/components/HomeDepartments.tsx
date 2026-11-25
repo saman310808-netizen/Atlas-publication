@@ -78,7 +78,7 @@ export const HomeDepartments: FC<HomeDepartmentsProps> = ({
       <section className="relative isolate overflow-hidden border-b border-[#3B241C]/15 bg-[#3B241C] py-14 lg:py-20" aria-labelledby="margins-home">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
           <img src="/photography/Vivid%20Panorama%20of%20a%20Colorful%20Fruit%20Market.png" alt="" className="h-full w-full object-cover object-center" />
-          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/25 to-black/15" />
         </div>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-14">
