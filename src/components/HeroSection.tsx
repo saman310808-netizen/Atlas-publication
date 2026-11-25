@@ -53,6 +53,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectArticle, onExp
         </div>
       </div>
 
+{leadArticle && (
       <div className="atlas-editors-strip">
         <div className="atlas-editors-heading">
           <span className="atlas-section-eyebrow">CURATED BY THE EDITORS</span>
@@ -60,17 +61,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectArticle, onExp
           <p>Writing selected by the Editors-in-Chief.</p>
         </div>
         <div className="atlas-editors-feature">
-          {leadArticle ? (
+          {(
             <button type="button" onClick={() => onSelectArticle(leadArticle)}>
               <span className="atlas-section-eyebrow">FEATURED READING</span>
               <strong>{leadArticle.title}</strong>
               <span>{leadArticle.author.name} <ArrowUpRight size={17} aria-hidden="true" /></span>
             </button>
-          ) : (
-            <p>Selections from our editors will appear here.</p>
           )}
         </div>
       </div>
+      )}
     </section>
   );
 };
