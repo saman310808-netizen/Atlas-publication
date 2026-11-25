@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, ArrowDownRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import websiteSettings from '../content/website-settings.json';
 import { logoImage, articles } from '../data/mockContent';
 import type { Article } from '../types';
@@ -49,7 +49,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectArticle, onExp
           <button type="button" className="atlas-text-link" onClick={onExploreAtlas}>
             Explore the publication <ArrowUpRight size={18} aria-hidden="true" />
           </button>
-          <div className="atlas-lead-index"><span>01 / A WORLD OF PERSPECTIVES</span><ArrowDownRight size={20} aria-hidden="true" /></div>
         </div>
       </div>
 
