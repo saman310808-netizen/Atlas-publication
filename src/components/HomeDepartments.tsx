@@ -75,23 +75,27 @@ export const HomeDepartments: FC<HomeDepartmentsProps> = ({
         </div>
       </section>
 
-      <section className="border-b border-[#3B241C]/15 bg-[#E8CCC6] py-14 lg:py-20" aria-labelledby="margins-home">
+      <section className="relative isolate overflow-hidden border-b border-[#3B241C]/15 bg-[#3B241C] py-14 lg:py-20" aria-labelledby="margins-home">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
+          <img src="/photography/Vivid%20Panorama%20of%20a%20Colorful%20Fruit%20Market.png" alt="" className="h-full w-full object-cover object-center" />
+          <div className="absolute inset-0 bg-black/55" />
+        </div>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-14">
             <div className="lg:col-span-5">
-              <p className="mb-2 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#7A3E2D]">
+              <p className="mb-2 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">
                 <Feather className="h-3.5 w-3.5" aria-hidden="true" /> Creative writing
               </p>
-              <h2 id="margins-home" className="font-editorial text-4xl font-medium text-[#3B241C] sm:text-5xl">
+              <h2 id="margins-home" className="font-editorial text-4xl font-medium text-white sm:text-5xl">
                 Margins
               </h2>
-              <p className="mt-4 max-w-xl font-serif text-lg italic leading-relaxed text-[#7A3E2D]">
+              <p className="mt-4 max-w-xl font-serif text-lg italic leading-relaxed text-white">
                 Poetry, short fiction, essays and creative work exploring identity, culture and the human experience.
               </p>
               <button
                 type="button"
                 onClick={() => onNavigate('margins')}
-                className="mt-6 inline-flex min-h-11 items-center gap-2 border border-[#3B241C] bg-[#3B241C] px-5 py-3 text-xs font-semibold uppercase tracking-wider text-[#F5E9DE] transition-colors hover:bg-[#6D2638] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6D2638]"
+                className="mt-6 inline-flex min-h-11 items-center gap-2 border border-white bg-black/25 px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white transition-colors hover:bg-black/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 Explore Margins <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
               </button>
