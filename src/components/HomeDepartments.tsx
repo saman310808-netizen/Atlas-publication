@@ -69,7 +69,7 @@ export const HomeDepartments: FC<HomeDepartmentsProps> = ({
             year={2026}
             photographer="Aidan Kelly"
             instagramHandle="aidankelly.jpg"
-            className="ml-auto mt-9 max-w-[48rem]"
+            className="mx-auto mt-9 max-w-[48rem]"
             imageClassName="aspect-[16/9]"
           />
         </div>
