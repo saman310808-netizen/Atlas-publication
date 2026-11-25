@@ -146,19 +146,8 @@ interface ArticleGridProps {
 export const ArticleGrid: FC<ArticleGridProps> = ({
   articles,
   onSelectArticle,
-  emptyTitle = 'No pieces in this part of the archive',
-  emptyText = 'As the archive grows, new writing will be gathered here.',
 }) => {
-  if (articles.length === 0) {
-    return (
-      <div className="border border-dashed border-[#3B241C]/25 bg-[#D7C6AE]/15 px-6 py-12 text-center">
-        <p className="font-editorial text-2xl text-[#3B241C]">{emptyTitle}</p>
-        <p className="mx-auto mt-2 max-w-md font-serif text-sm italic leading-relaxed text-[#7A3E2D]">
-          {emptyText}
-        </p>
-      </div>
-    );
-  }
+  if (articles.length === 0) return null;
 
   return (
     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">

@@ -125,3 +125,9 @@
   border-bottom-color:#3B241C;
   color:#F7F4ED;
 }
+
+/* Decorative section headings; retain masthead and body typography. */
+h2, h3, h4, h5, h6, .atlas-lead-copy h2 {
+  font-family: 'Cinzel Decorative', Georgia, serif;
+  letter-spacing: normal;
+}

@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, Compass, BookOpen, Clock, Globe2, ArrowUpRight, Grid, List } from 'lucide-react';
+import { Search, Compass, Clock, Globe2, ArrowUpRight, Grid, List } from 'lucide-react';
 import { articles } from '../data/mockContent';
 import { Article, Category } from '../types';
 
@@ -104,9 +104,6 @@ export const DiscoverySection: React.FC<DiscoverySectionProps> = ({
 
           {/* View toggle (Grid vs Index) */}
           <div className="flex items-center gap-1 text-xs text-[#7A3E2D]">
-            <span className="hidden sm:inline font-mono tabular-nums mr-2">
-              {filteredArticles.length} {filteredArticles.length === 1 ? 'article' : 'articles'}
-            </span>
             <div className="flex items-center border border-[#3B241C]/20 rounded-xs bg-[#F5E9DE] p-0.5">
               <button
                 onClick={() => setViewMode('grid')}
@@ -135,7 +132,7 @@ export const DiscoverySection: React.FC<DiscoverySectionProps> = ({
         </div>
 
         {/* Content Render: Grid Mode */}
-        {viewMode === 'grid' && (
+        {filteredArticles.length > 0 && viewMode === 'grid' && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredArticles.map((article) => (
               <article
@@ -203,7 +200,7 @@ export const DiscoverySection: React.FC<DiscoverySectionProps> = ({
         )}
 
         {/* Content Render: Index View (Print Magazine Index Table) */}
-        {viewMode === 'index' && (
+        {filteredArticles.length > 0 && viewMode === 'index' && (
           <div className="border border-[#3B241C]/20 rounded-sm bg-[#F5E9DE] divide-y divide-[#3B241C]/10">
             {filteredArticles.map((article, index) => (
               <div
@@ -248,24 +245,6 @@ export const DiscoverySection: React.FC<DiscoverySectionProps> = ({
           </div>
         )}
 
-        {filteredArticles.length === 0 && (
-          <div className="p-12 text-center space-y-3 bg-[#F5E9DE] border border-[#3B241C]/15 rounded-sm">
-            <BookOpen className="w-8 h-8 text-[#7A3E2D] mx-auto opacity-60" />
-            <h4 className="font-editorial text-2xl text-[#3B241C]">No articles match your query</h4>
-            <p className="text-sm text-[#7A3E2D] max-w-sm mx-auto font-serif italic">
-              Try searching by country, theme, or resetting the genre filters.
-            </p>
-            <button
-              onClick={() => {
-                setActiveCategory('all');
-                setSearchQuery('');
-              }}
-              className="mt-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider bg-[#3B241C] text-[#F5E9DE] rounded-sm"
-            >
-              Reset Filters
-            </button>
-          </div>
-        )}
       </div>
     </section>
   );

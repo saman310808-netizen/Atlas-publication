@@ -81,7 +81,6 @@ export const NotesFromPage: FC<NotesFromPageProps> = ({
                 Regions
               </h2>
             </div>
-            <p className="text-xs text-[#7A3E2D]">{filteredArticles.length} archive {filteredArticles.length === 1 ? 'piece' : 'pieces'}</p>
           </div>
           <div className="flex flex-wrap gap-2" role="group" aria-label="Filter Notes From by region">
             <button
