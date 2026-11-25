@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import type { FC } from 'react';
 import type { Article } from '../../types';
-import { ArticleGrid, PageHeading, PageNav, SectionHeading, pageFrame, pageInner } from './shared';
+import { ArticleGrid, PageHeading, PageNav, pageFrame, pageInner } from './shared';
 import type { AtlasPageProps } from './shared';
 import { PhotographyFigure } from '../PhotographyFigure';
 
@@ -19,10 +19,10 @@ export const TravelPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelectA
         <PageHeading
           eyebrow="The Atlas / Travel"
           title="Travel"
-          intro="Travel diaries, local perspectives, year abroad."
+          intro=""
         />
 
-        <section aria-labelledby="travel-writing">
+        <section aria-label="Travel writing">
           <div className="mb-6 grid grid-cols-1 gap-4 border-y border-[#3B241C]/15 py-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
               'Travel diaries & personal experience',
@@ -36,13 +36,6 @@ export const TravelPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelectA
               </div>
             ))}
           </div>
-
-          <SectionHeading
-            eyebrow=""
-            title="The road is part of the story"
-            description="Field notes from the archive, tagged with the places and subjects named by their writers."
-            id="travel-writing"
-          />
 
           {leadArticle && (
             <button
