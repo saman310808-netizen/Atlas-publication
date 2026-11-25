@@ -98,7 +98,7 @@ export const MarginsPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelect
               </button>
             ))}
           </div>
-          {filteredArticles.length > 0 ? (
+          {filteredArticles.length > 0 && (
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               {filteredArticles.map((article, index) => (
                 <ArticleCard
@@ -109,11 +109,6 @@ export const MarginsPage: FC<AtlasPageProps> = ({ articles, onNavigate, onSelect
                   excerpt={article.category === 'poetry' ? article.content[0] : article.excerpt}
                 />
               ))}
-            </div>
-          ) : (
-            <div className="border border-dashed border-[#3B241C]/25 bg-[#D7C6AE]/15 px-6 py-12 text-center">
-              <p className="font-editorial text-2xl text-[#3B241C]">No articles in this section yet</p>
-              
             </div>
           )}
         </section>
